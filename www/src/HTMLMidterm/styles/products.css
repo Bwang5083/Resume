@@ -1,0 +1,27 @@
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css");
+
+/* don't want to update until everything is retrieved*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    display: none;
+}
+/* this is where you put your custom css */
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item {
+    background: #333;
+    text-align: center;
+    height: 250px !important;
+}
+
+.bs-example {
+    margin: 20px;
+}

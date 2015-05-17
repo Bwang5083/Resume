@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <script>
+	function setProgressAndMeter() {
+		var progress = document.getElementById("progressBar");
+		setInterval(setProgressAndMeter, 500);
+		progress.value += 10;
+
+		var meter = document.getElementById("meterBar");
+		setInterval(setProgressAndMeter, 500);
+		meter.value += 10;
+	};
+    </script>
+</head>
+
+<body onLoad="setProgressAndMeter()">
+<h3>Progress Element</h3>
+Progress set by JavaScript on page load:
+<progress id="progressBar" max="100" value="0"></progress>
+</body>
+</html>
+
+<form onsubmit="return false">
+	<input name="x" type="number" min="100" step="5" value="100"> + 
+	<input name="y" type="number" min="100" step="5" value="100"><br><br>
+	<input type="button" value="Calculate" 
+		onClick="result.value = parseInt(x.value) + parseInt(y.value)">
+	<br><br>
+	Total: <output name="result" for="x y"></output>
+</form>
+
+<form name="color_form" action="survey.php" method="post">
+	<label for="firstcolor">Choose your first background color:</label><br>
+	<input type="color" name="firstcolor">
+</form>
+
+<form method="get" action="http://www.google.com/search">
+    <input type="search" name="q" size="30" maxlength="255">
+    <input type="hidden" name="domains" value="http://www.murach.com">
+    <input type="hidden" name="sitesearch" value="http://www.murach.com">
+    <input type="submit" name="search" value="Search">
+</form>
+
+<form name="date_form" method="post">
+Date and time:&nbsp;&nbsp;
+    <input type="datetime" name="datetime"><br><br>
+Local date and time:&nbsp;&nbsp;
+    <input type="datetime-local" name="datetimelocal"><br><br>
+Month:&nbsp;&nbsp;
+    <input type="month" name="month"><br><br>
+Week:&nbsp;&nbsp;
+    <input type="week" name="week"><br><br>
+Time:&nbsp;&nbsp;
+    <input type="time" name="time"><br><br>
+Date:&nbsp;&nbsp;
+    <input type="date" name="date">
+</form>
+
+<form name="test_form" action="test.php" method="get">
+    <label for="investment">Monthly investment: </label>
+    <input type="number" name="investment" id="investment"
+           min="100" max="1000" step="100" value="300"><br><br>
+    <label for="book">Rate the book from 1 to 5: </label>
+    <input type="range" name="book" id="book"
+           min="1" max="5" step="1"><br><br>
+    <input type="submit" name="submit" value="Submit Survey">
+</form>
+
+<form name="user_data" action="survey.php" method="post" >
+<h3>Your information:</h3>
+<label for="email">Your email address:</label>
+<input type="email" name="email" id="email" required><br><br>
+<label for="link">Your web site:</label>
+<input type="url" name="url" id="url" required><br><br>
+<label for="phone">Your phone number:</label>
+<input type="tel" name="phone" id="phone" required><br><br>
+<input type="submit" name="submit" value="Submit Survey">
+</form>
+
+<input type="url" name="link" id="link" list="links"><br><br>
+<datalist id="links">
+    <option value="http://www.google.com/" label="Google">
+    <option value="http://www.yahoo.com/" label="Yahoo">
+    <option value="http://www.bing.com/" label="Bing">
+    <option value="http://www.dogpile.com/" label="Dogpile">
+</datalist>
+
+<form name="myform" action="survey.php" method="post">
+    Name: <input type="text" name="name" required><br>
+    Address: <input type="text" name="address" novalidate><br>
+    Zip: <input type="text" name="zip" required><br>
+    Phone: <input type="text" name="phone" required  autocomplete="off"><br>
+    <input type="submit" name="submit" value="Submit Survey">
+</form>
+
+<form name="myform" action="sendemail.php" method="post" enctype="multipart/form-data">
+Attach an image:<br>
+<input type="file" name="fileupload" accept="image/jpeg image/gif">
+</form>
+
+<th rowspan="2">Book</th>
+<th colspan="4">Sales</th>
+
+<div id="eg1">
+	<h2>To order now:</h2>
+	<p><img src="images/computer.gif" alt="computer"><b>Web:</b> www.murach.com</p>
+	<p><img src="images/telephone.gif" alt="phone"><b>Phone:</b> 1-800-221-5528</p>
+	<p><img src="images/fax.gif" alt="fax machine"><b>Fax:</b> 1-559-440-0963</p>
+</div>
+
+<img src="images/washington_divided.gif" alt="Washington" usemap="#washington">
+<map name="washington">
+	<area href="north.html" shape="rect" coords="0,0,132,37" 
+		alt="Northern Washington" title="Northern Washington">
+	<area href="south.html" shape="rect" coords="0,38,132,82" 
+		alt="Southern Washington" title="Southern Washington">
+</map>
+
+<aside>
+	<p><a href="#reason1">Modular book organization</a></p>
+</aside>	
+<h2><a id="reason1">Our top-down chapter design puts the essentials first</a></h2>
+
+<a href="media/summary.pdf" type="application/pdf" target="_blank">Read Summary</a>

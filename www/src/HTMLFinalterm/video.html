@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>home</title>
+		<meta name="author" content="jason" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="CSS/styles.css" type="text/css" media="screen" />
+		<!-- Date: 2014-11-26 -->
+	</head>
+	<body>
+		<header>
+			<a href="home.html"><img src="images/logo.jpg" width="80" height="60" alt="website Logo" /></a>
+			<h1>ESSENTIAL POWER SERIES</h1>
+		</header>
+		<section>
+			<h1>Audio Example</h1>
+			<audio id="audioplayer" controls autoplay>
+				<source src="media/sjv_welcome.ogg" type="audio/ogg">
+				<source src="media/sjv_welcome.mp3" type="audio/mp3">
+
+				<object type="application/x-shockwave-flash" width="50" height="50">
+				<param name="movie" value="media/sjv_welcome.swf">
+				<param name="wmode" value="transparent">
+				<param name="quality" value="high">
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash"
+				data="media/sjv_welcome.swf"
+				width="50" height="50">
+				<param name="wmode" value="transparent">
+				<param name="quality" value="high">
+				</object>
+				<!--<![endif]-->
+				</object>
+			</audio>
+
+			<h1>Video Example</h1>
+			<video id="videoplayer" controls width="450" height="250" poster="images/poster.png" controls autoplay>
+				<source src="media/sjv_speakers_sampson.webm" type='video/webm; codecs="vp8, vorbis"'>
+
+				<object type="application/x-shockwave-flash" width="480" height="270">
+				<param name="movie" value="media/sjv_speakers_sampson.swf" >
+				<param name="wmode" value="transparent" >
+				<param name="quality" value="high" >
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash"
+				data="media/sjv_speakers_sampson.swf"
+				width="480" height="270">
+				<param name="wmode" value="transparent" >
+				<param name="quality" value="high" >
+				</object>
+				<!--<![endif]-->
+				</object>
+			</video>
+
+			<h1>Flash Play Example</h1>
+			<p>
+				<!--<a href="media/sjv_speakers_sampson.swf" controls autoplay><b>Play Flash video.</b></a>-->
+				<embed src="media/sjv_speakers_sampson.swf" type="application/x-shockwave-flash" allowscriptaccess="always"
+				wmode="opaque" width="225" height="175" autostart="true"></embed>
+			</p>
+		</section>
+		<aside>
+			<a href="image.html"><img src="images/image.jpg" width="153" height="60" alt="image" /></a>
+			<ul id="navigation">
+				<li>
+					Navigation Bar
+				</li>
+				<li>
+					<a href="home.html">Home</a>
+				</li>
+				<li>
+					<a href="video.html">Video</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</aside>
+		<footer>
+			&copy; 2014. Procter &amp; Gamble. All Rights Reserved. <a href="mailto:Bwang5083@conestogac.on.ca">Email</a>
+		</footer>
+	</body>
+</html>
+

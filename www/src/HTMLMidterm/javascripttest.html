@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<HTML lang="en">
+	<HEAD>
+		<TITLE> Show Pictures </TITLE>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</HEAD>
+
+	<BODY>
+		<div align="center">
+			<h1>无刷新实现图片更新</h1>
+			<hr >
+			<br >
+			<h5>效果如下</h5>
+			<div class="mod" id="mod_album" xmlns="">
+				<div align="center" class="modhead">
+					<span class="phpage"> <a href="#" onclick="previous();return false;">
+						<img border="0" align="absmiddle" width="60" height="60" src="images/pic1.jpg" title="lastone" alt="lastone"onmouseover="" onmouseout=""/> </a>
+						<a href="#" onclick="PlayControl();return false;">
+						<img border="0" align="absmiddle" width="60" height="60" src="images/pic2.jpg" title="pause" onmouseover="m_over(this)" onmouseout="m_out(this)" id="playControlImg"/>
+						</a>
+						<a href="#" onclick="next();return false;">
+						<img border="0" align="absmiddle" width="60" height="60" src="images/pic3.jpg" title="nextone" alt="nextone"onmouseover="" onmouseout=""/>
+						</a> </span>
+				</div>
+				<div id="m_album" class="modbox">
+					<div style="" class="image" id="imgArea">
+						<center id="picdiv"></center>
+					</div>
+				</div>
+
+				<script type="text/javascript">
+					function $(id) {
+						return document.getElementById(id);
+					}
+
+					var nowid = 0;
+					var pNum = 0;
+					var time = 3000;
+					var starting;
+					var isPlaying = true;
+					var playContrlImg = $("playControlImg");
+					var picdiv = $("picdiv");
+					var photoIndexs = [];
+					for (var i = 0; i < 64; i++) {
+						photoIndexs[i] = 'images/pic' + (i + 1) + '.JPG';
+					}
+					pNum = photoIndexs.length;
+					if (0 != pNum) {
+						$("imgArea").style.display = '';
+						picdiv.innerHTML = '<img src="' + photoIndexs[0] + '"border="0" /></a>';
+						starting = setInterval("rockPhoto()", time);
+					}
+					function m_over(ele) {
+						if (isPlaying)
+							ele.src = "images/pic1.jpg";
+						else
+							ele.src = "images/pic2.jpg";
+					}
+
+					function m_out(ele) {
+						if (isPlaying)
+							ele.src = "images/pic2.jpg";
+						else
+							ele.src = "images/beauty.gif";
+					}
+
+					function playControl() {
+						clearInterval(starting);
+						if (isPlaying) {
+							isPlaying = false;
+							playControlImg.src = "images/pic1.jpg";
+							playControlImg.title = "start play";
+						} else {
+							starting = setInterval('rockPhoto()', time);
+							isPlaying = true;
+							playControlImg.src = "images/pic2.jpg";
+							playControlImg.title = "pause";
+						}
+					}
+
+					function rockPhoto() {
+						nowid++;
+						if (nowid >= pNum)
+							nowid = 0;
+						picdiv.innerHTML = '<img src="' + photoIndexs[nowid] + '"border="0" />';
+					}
+
+					function next() {
+						rockPhoto();
+					}
+
+					function previous() {
+						nowid--;
+						if (nowid < 0)
+							nowid = pNum - 1;
+						picdiv.innerHTML = '<img src="' + photoIndexs[nowid] + '"border="0" />';
+					}
+				</script>
+			</div>
+		</div>
+	</BODY>
+</HTML>

@@ -1,0 +1,711 @@
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+
+/* the reset selector */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* the styles for the elements */
+body {
+    font-family: tahoma, helvetica, arial, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    background: url(../images/pic33.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    color: #6f6f6f;
+    margin: 0 auto;
+    /*background: #698B69;*/
+}
+
+html, body, #wrapper, h1, #nav, #nav li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+th, td {
+    font-size: 10px;
+}
+
+/*Start: formating all pages' header like index.html, products.html, Service.html, Company.html, Contact.html*/
+header {
+	background-image: -moz-linear-gradient(
+	    90deg, #FF2A8C 0%, #fffded 30%, white 50%, #fffded 80%, #FF2A8C 100%);
+	background-image: -webkit-linear-gradient(
+	    90deg, #FF2A8C 0%, #fffded 30%, white 50%, #fffded 80%, #FF2A8C 100%);
+	background-image: -o-linear-gradient(
+	    90deg, #FF2A8C 0%, #fffded 30%, white 50%, #fffded 80%, #FF2A8C 100%);
+	background-image: linear-gradient(
+	    90deg, #FF2A8C 0%, #fffded 30%, white 50%, #fffded 80%, #FF2A8C 100%);
+}
+
+/*formating logo picture in all pages*/
+header img {
+	margin: 5px 25px;
+}
+/*end*/
+
+/*Start: the big picture formatting of products.html and Company.html*/
+#ProductHeader{
+	border-bottom: 20px solid #BDBDBD;
+	padding: 0;
+	background: white;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#ProductHeader img{
+	padding: 0;
+	margin: 1px 0 0 0;
+	text-align: center;
+}
+/*end*/
+
+/*start: product list formatting in products.html*/
+aside.ProductList{
+	float:left;
+	margin: 1.5em 3em;
+	font-size: 150%;
+	height: 450px;
+	width: 135px;
+}
+
+aside.ProductList ul{
+	line-height:2;
+	padding: 0 0 1.5em .5em;
+}
+
+aside.ProductList li{
+	padding-bottom: .35em;
+	text-align:left;
+}
+/*end*/
+
+/*start: formatting in Service.html*/
+#Service{
+	color:#008000;
+	border:1px solid #008000;
+	margin: 20px 10px 10px;
+	padding: 2em;
+}
+
+#Service h2{
+	font-size: 150%;
+	border-bottom:2px solid #008000;
+}
+
+#Service h3{
+	font-size: 120%;
+	margin: 0;
+	padding: 0;
+}
+
+.ServiceContent{
+	padding: .5em 0;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 25px;
+	-webkit-column-gap: 25px;
+}
+
+.ServiceContent a{
+	color:#008000;
+}
+
+.ServiceContent a:hover{
+	color:#800000;
+	font-style:normal;
+}
+/*end*/
+
+#topspot img {
+	float: left;
+	margin-right: .2em;
+}
+
+#topspot p{
+	padding: 0 .25em;
+}
+
+#topspot #content{
+	float: right;
+	width: 200px;
+	margin-right: 0 5px;
+}
+
+/*wrap the whole page body for html file like index.html, products.html, Service.html, Company.html, Contact.html*/
+
+.blackP{
+	float: left;
+}
+/*
+#wrapper+img{
+	float: left;
+	margin-left: .5em;
+	padding-left: .5em;
+}
+*/
+#wrapper h1{
+	float: right;
+	font-size: 250%;
+	font-weight: bold;
+	color: #CB0368;
+	margin: .25em 6.5em .25em 0;
+}
+
+h1, h2, h3 {
+    font-size: 10px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 4px 0 0 0;
+    padding: 0 0 0 0;
+}
+
+p {
+    margin: 1em 0;
+    padding: 0;
+}
+
+.block {
+    display: block;
+}
+
+.clear {
+    clear: both;
+    height: 1px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+* html .clear {
+    margin-top: -5px;
+    margin-bottom: -4px;
+}
+
+.left {
+    float: left;
+    margin: 1px 8px 0px 0px;
+}
+
+.right {
+    float: right;
+    margin: 1px 0px 0px 8px;
+}
+
+.softright {
+    text-align: right;
+}
+
+.readmore {
+    text-align: right;
+    padding-right: 1em;
+}
+
+/* ***** */
+#wrapper {
+	margin: 0 auto;
+    width: 698px;
+    background: #fff;
+    border: 1px solid #fff;
+    text-align: left;
+    position: relative;
+}
+
+* html #wrapper {
+    width: 700px;
+}
+
+h1 {
+    padding: 9px 18px
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #cb4c8c;
+}
+
+a.orange { color: #cb4c8c; }
+a.green  { color: #cb4c8c; }
+a.teal   { color: #cb4c8c; }
+a.purple { color: #cb4c8c; }
+
+a:hover        { color: green; font-style:italic;}
+a:hover.orange { color: green; font-style:italic;}
+a:hover.green  { color: green; font-style:italic;}
+a:hover.teal   { color: green; font-style:italic;}
+a:hover.purple { color: green; font-style:italic;}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* nav */
+* html .clear {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*Start: define formatting of general menu in all major pages*/
+nav {
+	clear: both;
+}
+nav ul {
+	list-style: none;
+	padding: .5em 0;       /* padding above and below li elements */
+	background-color: #cb4c8c; }
+nav li {
+	display: inline; }
+nav a {
+	padding: .6em 2em;
+	text-decoration: none;
+	color: #fffded;
+	font-weight: bold;
+	border-right: 2px solid #fffded; }
+nav a.current { color: yellow; }
+/*
+#nav li {
+    float: left;
+    list-style: none;
+    width: 19.92%;
+    margin-top: 1px;
+    font-size: 11px;
+    font-weight: bold;
+    border-right: 1px solid white;
+    text-align: center;
+    line-height: 20px;
+    display: inline;
+
+}
+
+#nav a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    background: #cb4c8c;
+    padding: 2px 0;
+    width: 100%;
+}
+
+#nav a:hover {
+    color: yellow;
+}
+*/
+/*end*/
+
+/*Start: The formatting of item list in Company.html*/
+#company_nav{
+	float: left;
+	width: 120px;
+	margin: 20px 0 0 12px;
+    padding: 0;
+    list-style: none;
+}
+/*define an item list which float on the left*/
+#company_nav li {
+    list-style: none;
+    width: 139px;
+    font-size: 11px;
+    border-left: 1px solid white;
+    text-align: left;
+    background-color:#800000;
+    padding: .5em;
+    margin-left: 5px;
+    border-bottom:1px solid white;
+}
+/*first child background color is different with other items*/
+#company_nav li:first-child{
+	width: 137px;
+	font-size: 13px;
+	background-color:#F2901C;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+/*the content of each item in the item list*/
+#ArticleContent{
+	height: 450px;
+	width: 450px;
+	float:right;
+	padding: 0 10px;
+	margin: 0 10px;
+}
+
+#ArticleContent h2{
+	font-size: 150%;
+	font-weight: bold;
+	color: green;
+	text-align: left;
+	margin-top: 18px;
+}
+
+#ArticleContent h3{
+	font-size: 120%;
+	font-weight: bold;
+	color: green;
+	text-align: left;
+}
+
+#ArticleContent p{
+	font-size: 100%;
+	color: green;
+	padding-right: 10px;
+	text-align: left;
+}
+/*end*/
+
+/*Start: highlights */
+#highlights {
+    background: url(../images/pic1.jpg) no-repeat;
+    width: 327px;
+    float: left;
+    margin-right: -10px;
+}
+
+#highlights .p {
+    padding: 8px 7px;
+    margin-left: 187px;
+    border-bottom: 2px solid white;
+}
+
+* html #highlights .p {
+    padding-bottom: 6px;
+}
+
+#highlights div.green  { background: #bdcb21; }
+#highlights div.purple { background: #7976d6; }
+#highlights div.orange { background: #f2901c; }
+
+#highlights #topspot {
+    padding: 13px 6px;
+}
+
+#highlights .faceotweek {
+    float: left;
+    width: 97px;
+    font-size: 10px;
+    color: #487388;
+    font-weight: bold;
+}
+
+.faceotweek img:last-child{
+	border: 1px solid black;
+}
+
+#highlights .faceotweek p {
+    padding: 0 2px;
+}
+/*end*/
+
+/*Start: right */
+#right {
+    width: 370px;
+    float: right;
+    border-top: 1px solid #bdbdbd;
+    /*background: url(../images/pic8.jpg) no-repeat;*/
+}
+
+#right .right {
+    margin-left: 1px;
+}
+
+#right #products {
+    float: left;
+    width: 188px;
+}
+
+#right #products div {
+    border-top: 1px solid #bdbdbd;
+    padding: 10px 10px 0 10px;
+}
+
+#right #products #item-one {
+    border-top: none;
+    /*margin-top: 40px;*/
+}
+
+#right #products h2 {
+    clear: both;
+}
+
+#item-one{
+	margin-bottom: 20px;
+}
+
+#item-one p{
+	padding: 0 .25em;
+	margin: 0 0 .25em 0;
+}
+
+#item-one img{
+	float: left;
+	border: 1px solid black;
+	margin-right: .8em;
+}
+
+#item-two {
+	margin-bottom: 20px;
+}
+
+#item-two p{
+	padding: 0 .25em;
+	margin: 0 0 .25em 0;
+}
+
+#item-two img{
+	float: right;
+	border: 1px solid black;
+}
+
+#right #news {
+    float: right;
+    width: 165px;
+    margin: 5px 10px 0 0;
+    display: inline;
+}
+
+#right #news time{
+	font-size: 125%;
+	font-weight: bold;
+	color:#800000;
+	margin:0;
+	padding: 0;
+}
+
+#right #news h2 {
+    margin-bottom: 0.5em;
+    font-size: 135%;
+    font-weight:bold;
+}
+
+#right #news p{
+	margin:3px 3px 5px 0;
+}
+/*end*/
+
+/*Start: beauty */
+#beauty {
+    float: right;
+    width: 370px;
+    border-top: 1px solid #bdbdbd;
+    background: url(../images/pic34.jpg) no-repeat;
+    background-position: 1% 1%;
+    padding-top: 1em;
+
+    -moz-column-count: 2;
+	-webkit-column-count: 2;
+    column-count: 2;
+}
+
+#beauty #content{
+	margin-top: 65px;
+	margin-bottom: 5px;
+}
+
+#beauty img{
+	float: left;
+	margin: 0 .5em .5em 1em;
+	border: 1px solid black;
+}
+
+#beauty h3 {
+	margin: 3px 0;
+	color:#800000;
+	font-size:120%;
+}
+
+#beauty a{
+	color: #cb4c8c;
+}
+
+#beauty div {
+    padding: 0 10px;
+}
+/*end*/
+
+/*start: formatting of product picture group in products.html*/
+.ProductPictureGroup{
+	float: right;
+	border-left: 2px solid #BDBDBD;
+	height: 450px;
+	width: 470px;
+}
+
+.ProductPictureGroup img{
+	float: left;
+	/*border: 1px solid black;*/
+	margin: 4em 4.5em 1em;
+	-moz-box-shadow:2px 2px 2px 2px;
+    -webkit-box-shadow:2px 2px 2px 2px;
+    box-shadow:2px 2px 2px 2px;
+}
+
+.ProductPictureGroup a{
+	font-size: 120%;
+	margin: 0 7em;
+	padding: 2px;
+}
+/*end*/
+
+/*Start: the formatting of single product introduction page like SingleProduct.html, SingleProduct1.html, face-makeup.html, lips-makeup.html*/
+.IntroductionBody{
+	height: 500px;
+	margin: 10px;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+    column-count: 2;
+}
+
+figure {
+	float: left;
+	padding-left: 1em;
+}
+figure img {
+	margin: .5em 0 0;
+	-moz-box-shadow:2px 2px 2px 2px #800000;
+    -webkit-box-shadow:2px 2px 2px 2px #800000;
+    box-shadow:2px 2px 2px 2px #800000;
+}
+figcaption {
+	font-weight: bold;
+	color: #800000;
+	font-size: 150%;
+	padding-top: .5em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.SingleProduct{
+	float: right;
+	color: #800000;
+	margin-right: 8px;
+}
+/*end*/
+
+.IntroductionBody h2{
+	font-size: 165%;
+	font-weight: bold;
+	margin: 5px 2px;
+	padding: 2px;
+	border-bottom: 2px solid #800000;
+}
+
+.IntroductionBody h3{
+	font-size: 130%;
+	font-weight: bold;
+	margin: 0 2px;
+	padding: 2px;
+}
+
+.IntroductionBody p{
+	font-size: 115%;
+	margin: 0 2px;
+	padding: 5px 2px;
+}
+
+/*Start: formatting in Contact.html*/
+.ContactUS{
+	border: 5px double #FF2A8C;
+	border-radius: 5px;
+	margin: 10px 12px;
+	padding: 10px 12px;
+	height: 550px;
+	-moz-box-shadow:0 0 3px 3px;
+    -webkit-box-shadow:0 0 3px 3px;
+    box-shadow:0 0 3px 3px;
+}
+
+.ContactUS h2{
+	font-size: 170%;
+	font-weight: bold;
+	color:#800000;
+}
+
+.ContactUS h3{
+	font-size: 140%;
+	font-weight: bold;
+	color:#800000;
+}
+
+.ContactUS h4{
+	font-size: 120%;
+	font-weight: bold;
+	color:green;
+}
+
+.ContactUS p{
+	font-size: 115%;
+	color:green;
+}
+
+.ContactUS ul{
+	margin-left: 20px;
+	margin-top: 3px;
+}
+
+.ContactUS li{
+	margin: 2px 0;
+	color: green;
+	font-size: 115%;
+}
+
+.ContentLeft1{
+	float: left;
+	width: 300px;
+	/*height: 250px;*/
+}
+.ContentLeft2{
+	clear: both;
+	float: left;
+	width: 300px;
+}
+.ContentRight1{
+	float: right;
+	width: 300px;
+}
+.ContentRight2{
+	float: right;
+	width: 300px;
+}
+/*end*/
+
+/*Start: General footer */
+#footer {
+	clear: both;
+    color: #fff;
+    background: #cb0368;
+    text-align: center;
+    padding: 8px 0;
+}
+
+#footer a {
+    color: #fff;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+#footer a:hover {
+    color: #f8cde3;
+    font-style:italic;
+}
+/*end*/
