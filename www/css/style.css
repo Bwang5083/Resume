@@ -1,0 +1,107 @@
+@media (min-width: 500px) {
+    .container {
+        width: 100% !important;
+    }
+    .container-fluid {
+        width: 100% !important;
+    }
+    .navbar {
+        margin: 0 auto;
+        width: 100% !important;
+    }
+}
+
+#game-section{
+    margin: 15px auto;
+    width: 98%;
+    height: 285px;
+}
+
+#game-pic{
+    float: left;
+    width: 65%;
+}
+
+#game-pic img{
+    margin: 2px auto;
+}
+
+#game-left{
+    float: left;
+    width: 20%;
+}
+
+#game-left button{
+    margin: 0 5px;
+}
+
+#game-right{
+    float: right;
+    width: 15%;
+}
+
+#game-right button{
+    margin: 5px 5px;
+}
+
+#game-right h1{
+    font-size: 200%;
+    margin: 20px 5px;
+}
+
+#score{
+    font-size: 350%;
+    color: green;
+    margin-left: 20px;
+}
+
+#timer{
+    font-size: 200%;
+    color: #EE7621;
+    margin: 5px 5px;
+}
+
+#rules{
+    font-size: 5%;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 5px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: rgba(255,0,0,.4);
+	padding: .5em;
+	margin-bottom: .5em;
+	overflow: hidden;
+}
+
+/*Start: General footer */
+footer {
+    clear: both;
+	width: 98%;
+    margin: 0 auto;
+    border: 2px solid #C1CDC1;
+	color: black;
+	background: #cb0368;
+	text-align: center;
+	padding: 5px 0;
+	background-image: -moz-linear-gradient(
+	0deg, #DBDBDB 0%, #DBDBDB 25%, #DBDBDB 50%, #DBDBDB 75%, #DBDBDB 100%);
+	background-image: -webkit-linear-gradient(
+	0deg, #DBDBDB 0%, #DBDBDB 25%, #DBDBDB 50%, #DBDBDB 75%, #DBDBDB 100%);
+	background-image: -o-linear-gradient(
+	0deg, #DBDBDB 0%, #DBDBDB 25%, #DBDBDB 50%, #DBDBDB 75%, #DBDBDB 100%);
+	background-image: linear-gradient(
+	0deg, #DBDBDB 0%, #DBDBDB 25%, #DBDBDB 50%, #DBDBDB 75%, #DBDBDB 100%);
+}
+
+footer a {
+	color: black;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+footer a:hover {
+	color: green;
+	font-style: italic;
+}
+/*end*/

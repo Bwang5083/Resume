@@ -1,0 +1,99 @@
+.list-group-item-home{
+    height: 250px;
+}
+
+#photo{
+    float: left;
+    margin-left: 25px;
+    border: 1px solid #8B2500;
+}
+
+#contact{
+    margin-top: 35px;
+}
+
+#objective h2{
+    float: left;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+#objective p{
+    clear: both;
+    text-align: left;
+    margin: 10px 25px;
+    font-size: 120%;
+}
+
+#skills h2{
+    float: left;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+#skills ul{
+    clear: both;
+    text-align: left;
+    font-size: 120%;
+    margin: 10px 25px 10px 10px;
+}
+
+#portfolios h2{
+    float: left;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+#portfolios ul{
+    clear: both;
+    list-style: none;
+    text-align: left;
+    font-size: 120%;
+    margin-top: 10px;
+}
+
+#education h2{
+    float: left;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+#education ul{
+    clear: both;
+    list-style: none;
+    text-align: left;
+    font-size: 120%;
+    margin-top: 10px;
+}
+
+#WorkHistory h2{
+    float: left;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+#WorkHistory h4{
+    clear: both;
+    float: left;
+    margin-left: 25px;
+}
+
+#WorkHistory ul{
+    clear: both;
+    text-align: left;
+    font-size: 120%;
+    margin-top: 10px;
+}
+
+#hobby h2{
+    float: left;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+#hobby ul{
+    clear: both;
+    text-align: left;
+    font-size: 120%;
+    margin-top: 10px;
+}
