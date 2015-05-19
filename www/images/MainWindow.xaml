@@ -1,0 +1,265 @@
+<Window x:Class="BookApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:BookApplication"
+        xmlns:src="clr-namespace:BookApplication"
+        xmlns:l="clr-namespace:BookApplication"
+        Title="Book Application" WindowState="Maximized" Background="Beige" Icon="../Images/apple1.jpg" Loaded="Window_Loaded">
+    <Window.Resources>
+        <!--define class ToolBarInterface, bind its properties with DataTemplate. Here is for toolbar-->
+        <DataTemplate DataType="{x:Type src:ToolBarInterface}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Border Margin="4,0" Grid.Column="1" BorderThickness="2" CornerRadius="4">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Offset="0" Color="#aaa" />
+                            <GradientStop Offset="1" Color="#222" />
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Grid>
+                        <Rectangle>
+                            <Rectangle.Fill>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Offset="0" Color="#444" />
+                                    <GradientStop Offset="1" Color="#fff" />
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <!--ImagePath is a property of class ToolBarInterface-->
+                        <Image Width="48" Margin="2,2,2,1" Source="{Binding ImagePath}"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <!--define property trigger for tree item-->
+        <Style TargetType="TreeViewItem">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#8B0000" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Foreground" Value="DarkCyan" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--define property trigger for menu bar item-->
+        <Style TargetType="MenuItem">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#7CCD7C" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--define property trigger for button control-->
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#7CCD7C"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="st" TargetType="GridViewColumnHeader">
+            <Style.Setters>
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Height" Value="45" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#778899" Offset="0"/>
+                            <GradientStop Color="#4D4D4D" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
+    <!--define menu response function-->
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CommandClass.ConnectDB" Executed="OnConnectDB" />
+        <CommandBinding Command="local:CommandClass.AboutDlg" Executed="OnAboutDlg" />
+        <CommandBinding Command="local:CommandClass.Exit" Executed="OnExit" />
+    </Window.CommandBindings>
+    <!--dock menu bar, tool bar, tree control, gridview control, status bar-->
+    <DockPanel>
+        <Menu Height="30" FontSize="18" Background="#242424" Foreground="White" DockPanel.Dock="Top">
+            <MenuItem Header="_File" Margin="10 0">
+                <MenuItem Header="Connect to database" Foreground="Black" Command="local:CommandClass.ConnectDB" />
+                <Separator />
+                <MenuItem Header="Add to List" Foreground="Black" />
+                <Separator />
+                <MenuItem Header="Import" Foreground="Black" />
+                <MenuItem Header="Detail Info  Ctrl+D" Foreground="Black" />
+                <Separator />
+                <MenuItem Header="Delete" Foreground="Black" />
+                <MenuItem Header="Recent Document" Foreground="Black" />
+                <Separator />
+                <MenuItem Header="E_xit" Foreground="Black" Command="local:CommandClass.Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit" Margin="10 0">
+                <MenuItem Header="Undo" Foreground="Black" Command="Undo" />
+                <Separator />
+                <MenuItem Header="Cut" Foreground="Black" Command="Cut" />
+                <MenuItem Header="Copy" Foreground="Black" Command="Copy" />
+                <MenuItem Header="Paste" Foreground="Black" Command="Paste" />
+            </MenuItem>
+            <MenuItem Header="_Mall" Margin="10 0">
+                <MenuItem Header="Electronic Books" Foreground="Black" Command="Undo" />
+                <MenuItem Header="JD Shopping Mall" Foreground="Black" Command="Undo" />
+                <MenuItem Header="JD Gift Card" Foreground="Black" Command="Undo" />
+                <Separator />
+                <MenuItem Header="Purchased eBooks" Foreground="Black" Command="Cut" />
+                <MenuItem Header="My Order List" Foreground="Black" Command="Copy" />
+                <MenuItem Header="My Concerns" Foreground="Black" Command="Paste" />
+            </MenuItem>
+            <MenuItem Header="_Tool" Margin="10 0">
+                <MenuItem Header="Add Bookmark" Foreground="Black" Command="Undo" />
+                <Separator />
+                <MenuItem Header="Comment Book" Foreground="Black" Command="Undo" />
+                <MenuItem Header="Watch Comments" Foreground="Black" Command="Undo" />
+                <Separator />
+                <MenuItem Header="Synchronize Data" Foreground="Black" Command="Cut" />
+                <MenuItem Header="Option..." Foreground="Black" Command="Copy" />
+            </MenuItem>
+            <MenuItem Header="_Help" Margin="10 0">
+                <MenuItem Header="Online Help" Foreground="Black" Command="Undo" />
+                <MenuItem Header="Feedback" Foreground="Black" Command="Undo" />
+                <MenuItem Header="Check Update" Foreground="Black" Command="Undo" />
+                <Separator />
+                <MenuItem Header="About Reader" Foreground="Black" Command="local:CommandClass.AboutDlg" />
+            </MenuItem>
+        </Menu>
+        <!-- <Button Style="{StaticResource AnimatedButton}" Content="Animation" DockPanel.Dock="Top"/> -->
+        <Border Background="#4F4F4F" DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
+                <Button Name="Import" ToolTip="Import Book" MouseMove="Import_MouseMove" MouseLeave="Import_MouseLeave"/>
+                <Button Name="Delete" ToolTip="Delete Book" Click="Delete_Click" MouseMove="Delete_MouseMove" MouseLeave="Delete_MouseLeave"/>
+                <Button Name="MultiSelect" ToolTip="Multiple Choice" Click="MultiSelect_Click" MouseMove="MultiSelect_MouseMove" MouseLeave="MultiSelect_MouseLeave"/>
+                <Button Name="button4"/>
+                <Button Name="ListStyle" Margin="50 0 0 0" ToolTip="List Style" Click="ListStyle_Click" MouseMove="ListStyle_MouseMove" MouseLeave="ListStyle_MouseLeave"/>
+                <Button Name="BookDescription" ToolTip="Description" Click="BookDescription_Click" MouseMove="BookDescription_MouseMove" MouseLeave="BookDescription_MouseLeave"/>
+                <Button Name="button7"/>
+            </StackPanel>
+        </Border>
+        <!--dock status bar at the bottom, display advertisement in status bar-->
+        <Border Name="AdvertisementPart" Height="30" Background="#4F4F4F" DockPanel.Dock="Bottom">
+            <Canvas Background="White">
+                <Canvas Margin="0" Canvas.Left="0" Canvas.Top="0" ClipToBounds="True" Name="canMain" Background="#4F4F4F" Height="30" Width="1500">
+                    <TextBlock Name="advertise" FontSize="18" Foreground="#7FFF00" Text="{Binding CurrentAdvertisement}"/>
+                </Canvas>
+            </Canvas>
+        </Border>
+        <!--dock tree control on the left-->
+        <Border Width="250" Background="{StaticResource ResourceKey=CyanGradientBrush}" DockPanel.Dock="Left">
+            <TreeView Name="TreeViewData" Background="Azure">
+                <TreeViewItem Header="My Digital Resources" FontSize="16" FontWeight="Bold" Foreground="Brown" Margin="0 10"
+                        ItemsSource="{Binding DigitalResources.TreeNodes}" IsExpanded="True" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp">
+                    <TreeViewItem.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2 5">
+                                <Image Source="{Binding Icon}" Width="30" Height="30"/>
+                                <TextBlock Text="{Binding NodeName}" Margin="3 5" FontWeight="Normal"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </TreeViewItem.ItemTemplate>
+                </TreeViewItem>
+                <TreeViewItem Header='Online Shopping Mall' FontSize="16" FontWeight="Bold" Foreground="Brown" Margin="0 10"
+                       ItemsSource="{Binding ShoppingMall.TreeNodes}" IsExpanded="True" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp1">
+                    <TreeViewItem.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2 5">
+                                <Image Source="{Binding Icon}" Width="30" Height="30"/>
+                                <TextBlock Text="{Binding NodeName}" Margin="3 5" FontWeight="Normal"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </TreeViewItem.ItemTemplate>
+                </TreeViewItem>
+            </TreeView>
+        </Border>
+        <!--hide book list view by setting width to 0, it will be displayed when click description tool bar-->
+        <Border Name="DetailView" Background="Blue" Width="0" DockPanel.Dock="Left">
+            <ListBox Name="DetailedBookView" ItemsSource="{Binding BookCollection.Books}" Background="Beige" MouseLeftButtonUp="DetailedBookView_MouseLeftButtonUp">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Background="#CDB38B" Margin="0 0.2" Width="240">
+                            <Image Source="{Binding Icon}" Width="40" Height="54" Margin="5 10"/>
+                            <TextBlock Text="{Binding Path=BookName}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+        <!--hide book description view by setting width to 0, it will be displayed when click description tool bar-->
+        <Border Name="TabView" Background="Black" Width="0" DockPanel.Dock="Right">
+            <Frame Name="BookPage" Source="file:///D:/ProjectC%23/BookApplication/BookApplication/HTML/book1.html" />
+        </Border>
+        <!--dock gridview control on the right as book list-->
+        <Border Name="ListData" Background="AliceBlue">
+            <l:GridLineDecorator GridLineBrush="{Binding ElementName=cb_GridLineBrush, Path=SelectedItem.Content}">
+            <ListView Name="GridViewData" ItemsSource="{Binding BookCollection.Books}" Background="AntiqueWhite"
+                      FontSize="16" BorderThickness="1" MouseDoubleClick="GridViewData_MouseDoubleClick" SelectionChanged="GridViewData_SelectionChanged">
+                <ListView.View>
+                    <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Book Information" ColumnHeaderContainerStyle="{StaticResource st}">
+                        <GridViewColumn x:Name="selcolumn" Header="" Width="0">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox Name="multipleselect" IsChecked="{Binding Path=Check}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Icon}" Width="40" Height="54" Margin="0 5"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=BookName}" Header="BookName" Width="250"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=BookType}" Width="120">
+                            <GridViewColumnHeader>BookType
+                                <GridViewColumnHeader.ContextMenu>
+                                    <ContextMenu  Name="LastNameCM">
+                                        <MenuItem Header="Ascending" />
+                                        <MenuItem Header="Descending" />
+                                    </ContextMenu>
+                                </GridViewColumnHeader.ContextMenu>
+                            </GridViewColumnHeader>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=OrderID}" Header="OrderID" Width="120"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Price}" Header="Price" Width="120"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Size}" Header="Size" Width="120"/>
+                        <GridViewColumn Header="Progress" Width="120">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ProgressBar Height="10" Width="90" Margin="5" Maximum="100" Value="{Binding Progress}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Name="StartRead" Style="{StaticResource AnimatedButton}" Content="Start" FontSize="10" Click="StartRead_Click"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            </l:GridLineDecorator>
+        </Border>
+    </DockPanel>
+</Window>

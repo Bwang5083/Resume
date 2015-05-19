@@ -1,0 +1,32 @@
+<div ui-content-for="title">
+    <span>Separation proof & Reference letter</span>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="section">
+            <div class="panel-group" ui-state='myAccordion' ui-default='2'>
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 1}">
+                        <h4 class="panel-title">IBM separation proof </h4>
+                    </div>
+                    <div ui-if="myAccordion == 1" ui-scope-context='1'>
+                        <a href="images/IBMCertificate.jpg" target="_blank">
+                            <img src="images/IBMCertificate.jpg" alt="IBM separation proof" />
+                        </a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 2}">
+                        <h4 class="panel-title">IBM reference letter </h4>
+                    </div>
+                    <div ui-if="myAccordion == 2" ui-scope-context='2'>
+                        <a href="images/reference.pdf" target="_blank">
+                            <img src="images/IBMreference.jpg" alt="IBM Reference letter" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,201 @@
+<div ui-content-for="title">
+    <span>Accordion</span>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="section">
+            <div class="panel-group" ui-state='myAccordion' ui-default='1'>
+
+                <!--Bus Service Project-->
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 1}">
+                        <h4 class="panel-title">Bus Service </h4>
+                    </div>
+                    <div ui-if="myAccordion == 1" ui-scope-context='1'>
+                        <div class="panel-body">
+                            <div id="BusserviceHeader">
+                                <div id="DevelopEnv">
+                                    <h4>Basic Information: </h4>
+                                    <h5><strong>Platform:</strong> Windows Operation System</h5>
+                                    <h5><strong>Language:</strong> ASP.net, MVC, SQL, HTML, CSS</h5>
+                                    <h5><strong>Development Tool:</strong> Visual Studio 2013</h5>
+                                    <h5><strong>Database:</strong> SQL Server 2012</h5>
+                                    <h5><strong>Functions:</strong> </h5>
+                                    <ol>
+                                        <li>Bus routes management</li>
+                                        <li>Bus stop management</li>
+                                        <li>Schedule bus trip</li>
+                                        <li>Route scheduling for a specific bus stop</li>
+                                        <li>Role management</li>
+                                        <li>User management</li>
+                                        <li>Localization</li>
+                                    </ol>
+                                </div>
+                                <div id="BusserviceHpage">
+                                    <a href="images/BusserviceHpage.jpg" target="_blank">
+                                        <img src="images/BusserviceHpage.jpg" alt="home page" width="480px" height="300px" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="BusserviceSection">
+                                <h4>Functionalities: </h4>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>1. Bus routes management</h5>
+                                        <ul>
+                                            <li>Create a new bus route</li>
+                                            <li>Delete a bus route</li>
+                                            <li>Update a bus route information</li>
+                                            <li>Outline all bus stops of a bus route</li>
+                                            <li>Schedule bus trips</li>
+                                            <a href="images/TripScheduling1.jpg" target="_blank">Outline bus trips</a>
+                                            <br>
+                                            <a href="images/TripScheduling2.jpg" target="_blank">Schedule a new bus trip</a>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/RouteManagement.jpg" target="_blank">
+                                            <img src="images/RouteManagement.jpg" alt="route management" width="420px" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>2. Bus stops management</h5>
+                                        <ul>
+                                            <li>Create a new bus stop</li>
+                                            <li>Delete a bus stop</li>
+                                            <li>Update a bus stop information</li>
+                                            <li>Sort bus stop by number, location or hash</li>
+                                            <li>Check route scheduling</li>
+                                            <a href="images/RouteScheduling.jpg" target="_blank">Check which routes pass this bus stop</a>
+                                            <br>
+                                            <a href="images/RouteScheduling1.jpg" target="_blank">Check a route scheduling</a>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/StopManagement.jpg" target="_blank">
+                                            <img src="images/StopManagement.jpg" alt="stop management" width="420px" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>3. Schedule a bus trip</h5>
+                                        <ul>
+                                            <li>Outline all bus trips</li>
+                                            <a href="images/TripScheduling1.jpg" target="_blank">Bus trips</a>
+                                            <li>Create a new bus trip</li>
+                                            <a href="images/TripScheduling2.jpg" target="_blank">Create a new bus trip</a>
+                                            <li>Delete a bus trip</li>
+                                            <li>Update a bus trip information</li>
+                                            <li>Filter bus trip fields to display only five fields</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/TripScheduling2.jpg" target="_blank">
+                                            <img src="images/TripScheduling2.jpg" alt="schedule bus trip" width="420px" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>4. Route scheduling for a specific bus stop</h5>
+                                        <ul>
+                                            <li>Calculate how many bus routes pass a selected bus stop</li>
+                                            <a href="images/RouteScheduling.jpg" target="_blank">Check a route scheduling</a>
+                                            <li>Outline the scheduling of a selected route of a bus stop</li>
+                                            <a href="images/RouteScheduling1.jpg" target="_blank">Check a route scheduling</a>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/RouteScheduling1.jpg" target="_blank">
+                                            <img src="images/RouteScheduling1.jpg" alt="Route Scheduling" width="420px" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>5. Role management</h5>
+                                        <ul>
+                                            <li>Create a new role</li>
+                                            <li>Delete an existing role</li>
+                                            <li>Outline users in a role</li>
+                                            <li>Add a user to one role or multiple roles</li>
+                                            <li>Remove a user from a role</li>
+                                            <a href="images/Rolemanagement1.jpg" target="_blank">Users in a role</a>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/Rolemanagement.jpg" target="_blank">
+                                            <img src="images/Rolemanagement.jpg" alt="Role management" width="420px" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>6. User management</h5>
+                                        <ul>
+                                            <li>Lock or unlock a user from using the system</li>
+                                            <li>Reset a user's password</li>
+                                            <li>Delete an existing user</li>
+                                            <li>Sort bus stop by number, location or hash</li>
+                                            <li>Create a new user in registration module</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/Usermanagement.jpg" target="_blank">
+                                            <img src="images/Usermanagement.jpg" alt="user management" width="420px" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>7. Localization</h5>
+                                        <ul>
+                                            <li>Localizing the website to English, French or Chinese</li>
+                                            <li>Language selection page</li>
+                                            <a href="images/Localization.jpg" target="_blank">Check a route scheduling</a>
+                                            <li>Return to prior page and localize</li>
+                                            <a href="images/Localization1.jpg" target="_blank">Check a route scheduling</a>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/Localization1.jpg" target="_blank">
+                                            <img src="images/Localization1.jpg" alt="localization" width="420px" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Farm Management Project-->
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 2}">
+                        <h4 class="panel-title">Collapsible Group Item #2 </h4>
+                    </div>
+                    <div ui-if="myAccordion == 2" ui-scope-context='2'>
+                        <div class="panel-body">
+                            {{lorem1}}
+                        </div>
+                    </div>
+                </div>
+
+                <!--project-->
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 3}">
+                        <h4 class="panel-title">Collapsible Group Item #3 </h4>
+                    </div>
+                    <div ui-if="myAccordion == 3" ui-scope-context='3'>
+                        <div class="panel-body">
+                            {{lorem}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

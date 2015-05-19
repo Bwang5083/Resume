@@ -1,0 +1,149 @@
+<div ui-content-for="title">
+    <span>Tabs</span>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class='section'>
+            <ui-state id='activeTab' default='1'></ui-state>
+
+            <ul class="nav nav-tabs">
+                <li ui-class="{'active': activeTab == 1}">
+                    <a ui-set="{'activeTab': 1}">WPF</a>
+                </li>
+                <li ui-class="{'active': activeTab == 2}">
+                    <a ui-set="{'activeTab': 2}">WCF</a>
+                </li>
+                <li ui-class="{'active': activeTab == 3}">
+                    <a ui-set="{'activeTab': 3}">Tab 3</a>
+                </li>
+            </ul>
+
+            <div ui-if="activeTab == 1">
+                <div id="WPFHeader">
+                    <div id="DevelopEnv">
+                        <h4>Basic Information: </h4>
+                        <h5><strong>Name:</strong> Book Reader</h5>
+                        <h5><strong>Platform:</strong> Windows Operation System</h5>
+                        <h5><strong>Language:</strong> C#, WPF, MVVM, SQL, HTML, CSS</h5>
+                        <h5><strong>Development Tool:</strong> Visual Studio 2013</h5>
+                        <h5><strong>Database:</strong> SQL Server 2014</h5>
+                        <h5><strong>Functions:</strong> </h5>
+                        <ol>
+                            <li>Main interface</li>
+                            <li>Reading interface</li>
+                            <li>Resource dictionary library</li>
+                            <li>Using SQL Server to store all information</li>
+                            <li>Applying MVVM design pattern</li>
+                        </ol>
+                    </div>
+                    <div id="WPFHpage">
+                        <a href="images/wpf.mp4" target="_blank">
+                            <video src="images/wpf.mp4" width="480" height="300" type='video/mp4' poster="images/MainInterface.jpg" controls autoplay />
+                        </a>
+                    </div>
+                </div>
+                <div id="WPFSection">
+                    <h4>Functionalities: </h4>
+                    <div class="Function">
+                        <div class="WPFFunction">
+                            <h5>1. Main Interface</h5>
+                            <ul>
+                                <li>Menu bar</li>
+                                <li>Tool bar</li>
+                                <li>Tree view</li>
+                                <li>Grid view(book list or magazine list)</li>
+                                <li>Status bar(display rolling advertisement)</li>
+                            </ul>
+                        </div>
+                        <div class="FunctionPage">
+                            <a href="images/MainInterface.jpg" target="_blank">
+                                <img src="images/MainInterface.jpg" alt="Main Interface" width="420px" height="160px" />
+                            </a>
+                        </div>
+                        <div class="WPFFunction">
+                            <h5>2. Reading interface</h5>
+                            <ul>
+                                <li>Menu bar</li>
+                                <li>Tool bar</li>
+                                <a href="images/CreateBookMark.jpg" target="_blank">Add bookmark</a>
+                                <br>
+                                <a href="images/DeleteBookMark.jpg" target="_blank">Delete bookmark</a>
+                                <br>
+                                <a href="images/ReadingInterface.jpg" target="_blank">Page navigation</a>
+                                <br>
+                                <a href="images/zoomin.jpg" target="_blank">Zoom in & Zoom out</a>
+                                <li>Content view</li>
+                                <li>Book catalogue view</li>
+                                <li>Bookmark view</li>
+                                <a href="images/BookMark.jpg" target="_blank">Ouline all bookmarks</a>
+                            </ul>
+                        </div>
+                        <div class="FunctionPage">
+                            <a href="images/ReadingInterface.jpg" target="_blank">
+                                <img src="images/ReadingInterface.jpg" alt="Reading Interface" width="420px" height="210px" />
+                            </a>
+                        </div>
+                        <div class="WPFFunction">
+                            <h5>3. Resource dictionary library</h5>
+                            <ul>
+                                <li>Develop a general resource library which can be imported to other projects</li>
+                            </ul>
+                        </div>
+                        <div class="FunctionPage">
+                            <a href="images/resourcelib.jpg" target="_blank">
+                                <img src="images/resourcelib.jpg" alt="route management" width="350px" height="200px"/>
+                            </a>
+                        </div>
+                        <div class="WPFFunction">
+                            <h5>4. Using SQL Server to store information</h5>
+                            <ul>
+                                <li>Three layered architecture: data access layer(DBOperation), business logic layer(model), presentation layer(xaml)</li>
+                                <li>Tables in SQL Server database</li>
+                                Advertisement: store advertisement content<br>
+                                BookMark: store bookmark information<br>
+                                catalogue: store catalogue of all books<br>
+                                EMagazine: store electronic magazions' information<br>
+                                LocalShelf: store the information of all books<br>
+                                TreeView: store treeview nodes' information
+                            </ul>
+                        </div>
+                        <div class="FunctionPage">
+                            <a href="images/3lyrs2.jpg" target="_blank">
+                                <img src="images/3lyrs2.jpg" alt="three layered architecture" width="420px" height="220px" />
+                            </a>
+                        </div>
+                        <div class="WPFFunction">
+                            <h5>5. Applying MVVM design pattern</h5>
+                            <ul>
+                                <li>Define model</li>
+                                <a href="images/TreeViewDataMV.cs" target="_blank">TreeView model example</a>
+                                <li>Bind model with a control's or a window's DataContext</li>
+                                <a href="images/MainWindow.xaml.cs" target="_blank">Bind model with TreeView control example</a>
+                                <li>Bind a model property with interface</li>
+                                <a href="images/MainWindow.xaml" target="_blank">Bind property DigitalResources with TreeView example</a>
+                            </ul>
+                        </div>
+                        <div class="FunctionPage">
+                            <a href="images/MVVMPattern.jpg" target="_blank">
+                                <img src="images/MVVMPattern.jpg" alt="MVVM Pattern" width="420px" height="180px" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ui-if="activeTab == 2">
+                <h3 class="page-header">Tab 2</h3>
+                <p>{{lorem}}</p>
+            </div>
+
+            <div ui-if="activeTab == 3">
+                <h3 class="page-header">Tab 3</h3>
+                <p>{{lorem}}</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -23,14 +23,13 @@ var app = angular.module('MobileAngularUiExamples', [
 app.config(function($routeProvider) {
   $routeProvider.when('/',              {templateUrl: 'home.html', reloadOnSearch: false});
   $routeProvider.when('/webapplication',        {templateUrl: 'webapplication.html', reloadOnSearch: false});
-  $routeProvider.when('/toggle',        {templateUrl: 'toggle.html', reloadOnSearch: false});
-  $routeProvider.when('/tabs',          {templateUrl: 'tabs.html', reloadOnSearch: false});
-  $routeProvider.when('/accordion',     {templateUrl: 'accordion.html', reloadOnSearch: false});
-  $routeProvider.when('/overlay',       {templateUrl: 'overlay.html', reloadOnSearch: false});
-  $routeProvider.when('/forms',         {templateUrl: 'forms.html', reloadOnSearch: false});
+  $routeProvider.when('/ASP',        {templateUrl: 'ASP.html', reloadOnSearch: false});
+  $routeProvider.when('/CSharp',          {templateUrl: 'CSharp.html', reloadOnSearch: false});
+  $routeProvider.when('/CPlus',       {templateUrl: 'CPlus.html', reloadOnSearch: false});
+  $routeProvider.when('/Database',         {templateUrl: 'Database.html', reloadOnSearch: false});
   $routeProvider.when('/dropdown',      {templateUrl: 'dropdown.html', reloadOnSearch: false});
   $routeProvider.when('/drag',          {templateUrl: 'drag.html', reloadOnSearch: false});
-  $routeProvider.when('/carousel',      {templateUrl: 'carousel.html', reloadOnSearch: false});
+  $routeProvider.when('/reference',      {templateUrl: 'reference.html', reloadOnSearch: false});
 });
 
 //
@@ -201,7 +200,9 @@ app.controller('MainController', function($rootScope, $scope){
   });
 
   // Fake text i used here and there.
-  $scope.lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel explicabo, aliquid eaque soluta nihil eligendi adipisci error, illum corrupti nam fuga omnis quod quaerat mollitia expedita impedit dolores ipsam. Obcaecati.';
+//  $scope.lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel explicabo, aliquid eaque soluta nihil eligendi adipisci error, //illum corrupti nam fuga omnis quod quaerat mollitia expedita impedit dolores ipsam. Obcaecati.';
+    $scope.lorem = 'http://bwang5083.github.io/JavascriptMidterm';
+    $scope.lorem1 = 'http://bwang5083.github.io/JavascriptFinalterm';
 
   //
   // 'Scroll' screen

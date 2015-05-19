@@ -97,3 +97,87 @@
     font-size: 120%;
     margin-top: 10px;
 }
+
+#BusserviceHeader{
+    border: 3px double #8B0000;
+	border-radius: 5px;
+	margin: 10px 12px;
+	padding: 10px 12px;
+    height: 335px;
+	-moz-box-shadow:0 0 3px 3px;
+    -webkit-box-shadow:0 0 3px 3px;
+    box-shadow:0 0 3px 3px;
+}
+
+#DevelopEnv{
+    float: left;
+    width: 300px;
+}
+
+#BusserviceHpage{
+    float: right;
+    border: 1px solid black;
+}
+
+#BusserviceSection{
+    border: 3px double #8B0000;
+	border-radius: 5px;
+	margin: 10px 12px;
+	padding: 10px 12px;
+    height: 1300px;
+	-moz-box-shadow:0 0 3px 3px;
+    -webkit-box-shadow:0 0 3px 3px;
+    box-shadow:0 0 3px 3px;
+}
+
+.Function{
+    clear: both;
+}
+
+.BusserviceFunction{
+    float: left;
+    margin-top: 10px;
+    width: 320px;
+}
+
+.FunctionPage{
+    float: right;
+    border: 1px solid black;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#WPFHeader{
+    border: 3px double #8B0000;
+	border-radius: 5px;
+	margin: 10px 12px;
+	padding: 10px 12px;
+    height: 335px;
+	-moz-box-shadow:0 0 3px 3px;
+    -webkit-box-shadow:0 0 3px 3px;
+    box-shadow:0 0 3px 3px;
+}
+
+#WPFHpage{
+    float: right;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+#WPFSection{
+    border: 3px double #8B0000;
+	border-radius: 5px;
+	margin: 10px 12px;
+	padding: 10px 12px;
+    height: 1150px;
+	-moz-box-shadow:0 0 3px 3px;
+    -webkit-box-shadow:0 0 3px 3px;
+    box-shadow:0 0 3px 3px;
+}
+
+.WPFFunction{
+    clear: both;
+    float: left;
+    margin-top: 10px;
+    width: 320px;
+}
