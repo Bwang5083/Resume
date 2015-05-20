@@ -194,3 +194,17 @@
     position: relative;
     width: 40%;
 }
+
+.databaseENV{
+    float: left;
+    text-align: left;
+    margin: 15px auto;
+    max-width: 43%;
+}
+
+.databasePage{
+    position: relative;
+    margin: 15px auto;
+    max-width: 53%;
+    overflow: hidden;
+}

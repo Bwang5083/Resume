@@ -1,44 +1,96 @@
 <div ui-content-for="title">
-  <span>Forms</span>
+    <span>Database</span>
 </div>
 
 <div class="scrollable">
- <div class="scrollable-content section">
+    <div class="scrollable-content">
+        <div class='section'>
+            <ui-state id='activeTab' default='1'></ui-state>
 
-  <form role="form" ng-submit='login()'>
-    <fieldset>
-      <legend>Login</legend>
-        <div class="form-group has-success has-feedback">
-          <label>Email</label>
-          <input type="email"
-                 ng-model="email"
-                 class="form-control"
-                 placeholder="Enter email">
+            <ul class="nav nav-tabs">
+                <li ui-class="{'active': activeTab == 1}">
+                    <a ui-set="{'activeTab': 1}">SQL Server</a>
+                </li>
+                <li ui-class="{'active': activeTab == 2}">
+                    <a ui-set="{'activeTab': 2}">Oracle</a>
+                </li>
+                <li ui-class="{'active': activeTab == 3}">
+                    <a ui-set="{'activeTab': 3}">mysql</a>
+                </li>
+                <li ui-class="{'active': activeTab == 4}">
+                    <a ui-set="{'activeTab': 4}">sqlite</a>
+                </li>
+            </ul>
+
+            <div ui-if="activeTab == 1">
+                <div class="list-group text-center">
+                    <div class="list-group-item">
+                        <div class="databaseENV">
+                            <h3>Baidu Statistics Project</h3>
+                            <h5><strong>Name:</strong> Baidu Statistics(off-line version)</h5>
+                            <h5><strong>Platform:</strong> Windows Operation System</h5>
+                            <h5><strong>Language:</strong> C++, STL, DCOM, COM, Windows Form, SQL</h5>
+                            <h5><strong>Development Tool:</strong> Visual Studio 2010</h5>
+                            <h5><strong>Database:</strong> SQL Server 2008</h5>
+                            <h5><strong>Functions:</strong> </h5>
+                            <ol>
+                                <li>Get baidu statistics data from server database</li>
+                                <li>Get baidu network alliance promotion data from server database</li>
+                                <li>Get baidu search promotion data from server database</li>
+                                <li>Generate word version report</li>
+                            </ol>
+                        </div>
+                        <div class="databasePage">
+                            <a href="images/BaiduSta.mp4" target="_blank">
+                                <video src="images/BaiduSta.mp4" type='video/mp4' height="295" poster="images/baiduSta.jpg" controls autoplay/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="databaseENV">
+                            <h3>KM database upgrade Project</h3>
+                            <h5><strong>Name:</strong> KM database upgrade</h5>
+                            <h5><strong>Platform:</strong> Windows Operation System</h5>
+                            <h5><strong>Language:</strong> C++, MFC, Windows Form, SQL, ADO, ODBC</h5>
+                            <h5><strong>Development Tool:</strong> Visual C++ 6.0</h5>
+                            <h5><strong>Database:</strong> SQL Server, Oracle, Access</h5>
+                            <h5><strong>Functions:</strong> </h5>
+                            <ol>
+                                <li>Read data from Access database and display on interface</li>
+                                <li>Transfer data from Access database to SQL Server database</li>
+                                <li>Transfer data from Access database to Oracle database</li>
+                                <li>Roll back if any issue appears</li>
+                            </ol>
+                        </div>
+                        <div class="databasePage">
+                            <a href="images/KMupgrade.mp4" target="_blank">
+                                <video src="images/KMupgrade.mp4" type='video/mp4' height="310" poster="images/KMupdate.jpg" controls autoplay/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div id="objective">
+                            <h2>Objective</h2>
+                            <p>To put my former</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ui-if="activeTab == 2">
+                <h3 class="page-header">ongoing</h3>
+            </div>
+
+            <div ui-if="activeTab == 3">
+                <h3 class="page-header">ongoing</h3>
+            </div>
+
+            <div ui-if="activeTab == 4">
+                <h3 class="page-header">ongoing</h3>
+            </div>
         </div>
 
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password"
-                 class="form-control"
-                 placeholder="Password">
-        </div>
-
-        <div class="form-group">
-          <label>Remember Me</label>
-          <ui-switch
-            ng-model='rememberMe'></ui-switch>
-        </div>
-    </fieldset>
-    <hr>
-
-    <button class="btn btn-primary btn-block">
-      Login
-    </button>
-
-    <div ui-content-for="navbarAction">
-      <a class='btn' ng-click='login()'>Login</a>
     </div>
-
-  </form>
- </div>
 </div>

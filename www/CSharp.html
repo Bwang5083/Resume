@@ -15,7 +15,7 @@
                     <a ui-set="{'activeTab': 2}">WCF</a>
                 </li>
                 <li ui-class="{'active': activeTab == 3}">
-                    <a ui-set="{'activeTab': 3}">Tab 3</a>
+                    <a ui-set="{'activeTab': 3}">Library</a>
                 </li>
             </ul>
 
@@ -134,13 +134,11 @@
             </div>
 
             <div ui-if="activeTab == 2">
-                <h3 class="page-header">Tab 2</h3>
-                <p>{{lorem}}</p>
+                <h3 class="page-header">ongoing</h3>
             </div>
 
             <div ui-if="activeTab == 3">
-                <h3 class="page-header">Tab 3</h3>
-                <p>{{lorem}}</p>
+                <h3 class="page-header">ongoing</h3>
             </div>
 
         </div>
