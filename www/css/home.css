@@ -208,3 +208,15 @@
     max-width: 53%;
     overflow: hidden;
 }
+
+.oracleENV{
+    margin: 15px 10px;
+}
+
+#oracleFunction{
+    margin: 15px 10px;
+}
+
+#oracleFunction h5{
+    font-weight: bold;
+}

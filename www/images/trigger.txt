@@ -1,0 +1,28 @@
+create or replace trigger POI_TRIGGER
+after insert on d205
+for each row
+declare
+INTA NUMBER;
+globalid NUMBER(10);
+newname varchar2(160);
+begin
+select count(*) into INTA from a205 where objectid=:new.SDE_DELETES_ROW_ID and SDE_STATE_ID=:new.DELETED_AT;
+select NAME into newname from a205 where objectid=:new.SDE_DELETES_ROW_ID and SDE_STATE_ID=:new.DELETED_AT;
+select GLOBAL_ID into globalid from poi where objectid=:new.SDE_DELETES_ROW_ID;
+if INTA = 0
+then
+    delete from POI_NAME_ATT_MV_VIEW where global_id=globalid;
+else
+    update POI_NAME_ATT_MV_VIEW set name=newname where global_id=globalid;
+end if;
+end POI_TRIGGER;
+
+
+create or replace
+TRIGGER POI_TRIGGER
+AFTER DELETE ON POI
+REFERENCING NEW AS NEW OLD AS OLD
+FOR EACH ROW
+BEGIN
+delete from POI_NAME_ATT_MV_VIEW where GLOBAL_ID=OLD.GLOBAL_ID;
+END;

@@ -69,18 +69,63 @@
                             </a>
                         </div>
                     </div>
-
-                    <div class="list-group-item">
-                        <div id="objective">
-                            <h2>Objective</h2>
-                            <p>To put my former</p>
-                        </div>
-                    </div>
                 </div>
             </div>
 
             <div ui-if="activeTab == 2">
-                <h3 class="page-header">ongoing</h3>
+                <div class="list-group-item">
+                    <div class="oracleENV">
+                        <h3>LingTu AnEditor Project</h3>
+                        <h4>Overview</h4>
+                        <h5><strong>Name:</strong> AnEditor</h5>
+                        <h5><strong>Platform:</strong> Windows Operation System</h5>
+                        <h5><strong>Language:</strong> C++, MFC, Socket, STL, COM, DCOM, SQL, sqlplus</h5>
+                        <h5><strong>Development Tool:</strong> Visual Studio 2010, Oracle SQL Developer</h5>
+                        <h5><strong>Database:</strong> Oracle 11g</h5>
+                        <h5><strong>Description:</strong> AnEditor is the product name, OptimizationDLL is a component of AnEditor which was developed by me</h5>
+                        <h5><strong>Functions:</strong> </h5>
+                        <ol>
+                            <li>Generate global id on server side and distribute it to the client which requests. Note: there may be hundreds of clients request global id simultaneously</li>
+                            <li>Transfer a pretty long SQL sentence(for example: 8Mbytes long) to a shorter one</li>
+                            <li>Make use of materialized view to improve performance of joint query</li>
+                            <li>Develop triggers and stored procedures to optimize query speed</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div id="oracleFunction">
+                        <h4>Functionalities</h4>
+                        <h5>Global ID Distribution</h5>
+                        <ol>
+                            <li>Server application listen port, be ready to accept request from client application</li>
+                            <li>Use block model socket in server application, then all requests from client applications must stand in line to wait for distributing global id</li>
+                            <li>Generate a global id. Get the max id value in globalid table in oracle database, then plus one to generate a new global id</li>
+                            <li>Record the new generated global id in globalid table in oracle database</li>
+                        </ol>
+                        <h5>Solution for long SQL sentence</h5>
+                        <ol>
+                            <li>configure local Oracle service to remote execute sql via sqlplus (<a href="images/ConfigurelocalORACLEservice.docx" target="_blank">configuration document</a>)</li>
+                            <li>Connect remote oracle database via sqlplus (<a href="images/connwithSqlplus.txt" target="_blank">connection script</a>)</li>
+                            <li>Replace the long sql like "select * from table1 where id in(1,2,...,9999999999)" with a shorter sql like "select * from table1 where id in(select id from temptable)"</li>
+                            <li>Run a sql to create a temp table via sqlplus in client application</li>
+                            <li>Launch multiple processes to insert id(1,2,...,9999999999) into temp table via sqlplus in client application</li>
+                            <li>Remove temp table after using</li>
+                        </ol>
+                        <h5>Materialized view</h5>
+                        <ol>
+                            <li>Connect remote oracle database via Oracle SQL Developer</li><br>
+                            <a href="images/sqldeveloper.jpg" target="_blank"><img src="images/sqldeveloper.jpg" alt="sql developer" width="350" height="225" /></a>
+                            <li>Create materialized view (<a href="images/materializedview.sql" target="_blank">script download</a>)</li>
+                            <li>When application conducts joint query in Oracle database, it will query the materialized view instead. The behavior is equivalent with querying one table</li>
+                        </ol>
+                        <h5>Trigger & Stored procedure</h5>
+                        <ol>
+                            <li>Set up some triggers to maintain the completeness of database (<a href="images/trigger.txt" target="_blank">trigger</a>)</li>
+                            <li>Client application call stored procedure to create/drop temp table, create/drop view in oracle database (<a href="images/procedure1.txt" target="_blank">stored procedure script</a>)</li>
+                            <li>Client application call stored procedure to insert or update records in table (<a href="images/procedureTable.sql" target="_blank">stored procedure script</a>)</li>
+                        </ol>
+                    </div>
+                </div>
             </div>
 
             <div ui-if="activeTab == 3">

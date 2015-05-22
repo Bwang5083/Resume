@@ -1,0 +1,30 @@
+Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+C:\Documents and Settings\wangbin>sqlplus /nolog
+
+SQL*Plus: Release 10.2.0.1.0 - Production on 星期二 12月 7 16:49:48 2010
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+SQL> conn sys/wangbin@orcl_172.20.2.145 as sysdba;
+已连接。
+SQL> grant create table to bj_4Map_20100812;
+
+授权成功。
+
+SQL> conn bj_4Map_20100812/AutoNavi2010@orcl_172.20.2.145;
+已连接。
+SQL> start c:\test.sql;
+  2
+SQL> select count(*) from poi_mv_view;
+
+  COUNT(*)
+----------
+    209553
+
+SQL> start c:\test.sql;
+
+表已创建。
+
+SQL>

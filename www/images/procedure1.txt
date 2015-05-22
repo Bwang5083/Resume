@@ -1,0 +1,105 @@
+begin
+mainproc(418500.000002, 143717.000002, 418950.000002, 144035.000002,'Temp_Global');
+end;
+
+begin
+DropTableAndView('Temp_Global');
+end;
+
+create or replace
+procedure mainproc(x1 in float,y1 in float,x2 in float,y2 in float,tablename in varchar)
+as
+begin
+CreateTempTable(tablename);
+GetParentFromRange(x1, y1, x2, y2,tablename);
+GetChildFromRange(x1, y1, x2, y2,tablename);
+GetParentChild(tablename);
+GetChildParent(tablename);
+CreateView(tablename);
+end;
+
+create or replace
+procedure CreateTempTable(tablename in varchar2)
+as
+str varchar2(256);
+create_str varchar2(512);
+begin
+str := concat('create global temporary table ',tablename);
+create_str := concat(str,'(GLOBAL_ID NUMBER(16) PRIMARY KEY) on commit preserve rows');
+execute immediate create_str;
+end;
+
+create or replace
+procedure GetParentFromRange(x1 in float,y1 in float,x2 in float,y2 in float,tablename in varchar2)
+as
+str varchar2(512);
+begin
+str := concat('insert into ',tablename);
+str := concat(str,' value(select distinct p_poi_id from poi_p_c_rel start with c_poi_id 
+in(select GLOBAL_ID from poi where sde.st_envintersects(poi.shape,:1,:2,:3,:4)=1) connect by prior p_poi_id=c_poi_id)');
+execute immediate str using x1,y1,x2,y2;
+end;
+
+create or replace
+procedure GetParentChild(tablename in varchar2)
+as
+str varchar2(512);
+begin
+str := concat('insert into ',tablename);
+str := concat(str,' value(select distinct c_poi_id from poi_p_c_rel where c_poi_id not in(select global_id from ');
+str := concat(str,tablename);
+str := concat(str,') start with p_poi_id in(select GLOBAL_ID from ');
+str := concat(str,tablename);
+str := concat(str,') connect by prior p_poi_id=c_poi_id)');
+execute immediate str;
+end;
+
+create or replace
+procedure GetChildFromRange(x1 in float,y1 in float,x2 in float,y2 in float,tablename in varchar2)
+as
+str varchar2(512);
+begin
+str := concat('insert into ',tablename);
+str := concat(str,' value(select distinct c_poi_id from poi_p_c_rel start with p_poi_id 
+in(select GLOBAL_ID from poi where sde.st_envintersects(poi.shape,:1,:2,:3,:4)=1) connect by prior c_poi_id=p_poi_id)');
+execute immediate str using x1,y1,x2,y2;
+end;
+
+create or replace
+procedure GetChildParent(tablename in varchar2)
+as
+str varchar2(512);
+begin
+str := concat('insert into ',tablename);
+str := concat(str,' value(select distinct p_poi_id from poi_p_c_rel where p_poi_id not in(select global_id from ');
+str := concat(str,tablename);
+str := concat(str,') start with c_poi_id in(select GLOBAL_ID from ');
+str := concat(str,tablename);
+str := concat(str,') connect by prior p_poi_id=c_poi_id)');
+execute immediate str;
+end;
+
+create or replace
+procedure CreateView(tablename in varchar2)
+as
+str varchar2(512);
+begin
+str := concat('create materialized view ',tablename);
+str := concat(str,'1 tablespace Latest as select * from ');
+str := concat(str,tablename);
+execute immediate str;
+end;
+
+create or replace
+procedure DropTableAndView(tablename in varchar2)
+as
+str varchar2(512);
+begin
+str := concat('TRUNCATE TABLE  ',tablename);
+execute immediate str;
+str := concat('drop table ',tablename);
+execute immediate str;
+str := concat('drop materialized view ',tablename);
+str := concat(str,'1');
+execute immediate str;
+end;
