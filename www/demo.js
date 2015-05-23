@@ -28,7 +28,7 @@ app.config(function($routeProvider) {
   $routeProvider.when('/CPlus',       {templateUrl: 'CPlus.html', reloadOnSearch: false});
   $routeProvider.when('/Database',         {templateUrl: 'Database.html', reloadOnSearch: false});
   $routeProvider.when('/COM',      {templateUrl: 'COM.html', reloadOnSearch: false});
-  $routeProvider.when('/drag',          {templateUrl: 'drag.html', reloadOnSearch: false});
+  $routeProvider.when('/conestoga',          {templateUrl: 'conestoga.html', reloadOnSearch: false});
   $routeProvider.when('/reference',      {templateUrl: 'reference.html', reloadOnSearch: false});
 });
 

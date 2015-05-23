@@ -1,0 +1,43 @@
+<div ui-content-for="title">
+    <span>Accordion</span>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="section">
+            <div class="panel-group" ui-state='myAccordion' ui-default='3'>
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 1}">
+                        <h4 class="panel-title">Assignment</h4>
+                    </div>
+                    <div ui-if="myAccordion == 1" ui-scope-context='1'>
+                        <h5>ongoing</h5>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 2}">
+                        <h4 class="panel-title">Dean's Honour</h4>
+                    </div>
+                    <div ui-if="myAccordion == 2" ui-scope-context='2'>
+                        <a href="images/deanHonour.jpg" target="_blank">
+                            <img src="images/deanHonour.jpg" alt="dean's honour" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 3}">
+                        <h4 class="panel-title">Transcript</h4>
+                    </div>
+                    <div ui-if="myAccordion == 3" ui-scope-context='3'>
+                        <a href="images/grade.pdf" target="_blank">
+                            <img src="images/grade.jpg" alt="conestoga transcript" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,5 +1,5 @@
 <div ui-content-for="title">
-    <span>Tabs</span>
+    <span>C++ Application</span>
 </div>
 
 <div class="scrollable">
@@ -9,7 +9,7 @@
 
             <ul class="nav nav-tabs">
                 <li ui-class="{'active': activeTab == 1}">
-                    <a ui-set="{'activeTab': 1}">MFC</a>
+                    <a ui-set="{'activeTab': 1}">MapChina 2007</a>
                 </li>
                 <li ui-class="{'active': activeTab == 2}">
                     <a ui-set="{'activeTab': 2}">ATL</a>
@@ -23,7 +23,169 @@
             </ul>
 
             <div ui-if="activeTab == 1">
-                <h3 class="page-header">ongoing</h3>
+                <div id="MapAudio">
+                    <audio src="images/skycity.mp3" type='audio/mp3' autoplay />
+                </div>
+                <div id="MapChinaVideo">
+                    <a href="images/MapChina.mp4" target="_blank">
+                        <video src="images/MapChina.mp4" type='video/mp4' height="450" poster="images/MapChina.jpg" controls autoplay loop/>
+                    </a>
+                </div>
+
+                <div id="MapChinaBasicInfo">
+                    <h4>Basic Information: </h4>
+                    <h5><strong>Project Name:</strong> MapChina 2007</h5>
+                    <h5><strong>Platform:</strong> Windows Operation System</h5>
+                    <h5><strong>Language:</strong> C++, STL, MFC, COM, Windows Hook, HTML</h5>
+                    <h5><strong>Development Tool:</strong> Visual C++ 6.0</h5>
+                    <h5><strong>Database:</strong> sqlite</h5>
+                    <h5><strong>Functions:</strong> </h5>
+                    <ol>
+                        <li>Public Transport Searching</li>
+                        <li>Driving Navigation</li>
+                        <li>Train Time Table</li>
+                        <li>City Introduction</li>
+                        <li>Tourist Guidance</li>
+                        <li>City List</li>
+                        <li>Roadmap</li>
+                        <li>Interface with portable device</li>
+                    </ol>
+                </div>
+
+                <div id="MapChinaArchitecture">
+                    <h4>Architecture of MapChina 2007 <a href="images/MapChinaarchitecture.jpg" target="_blank"> (architecture charter)</a></h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Description</th>
+                                <th>Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MapChina(main project)</td>
+                                <td>
+                                    <ol>
+                                        <li>Load all dlls and pmc when system launching</li>
+                                        <li>Install windows hook to change system skin</li>
+                                        <li>Load menu bar</li>
+                                        <li>Create navigation bar on the left side of main interface</li>
+                                        <li>Read configuration file</li>
+                                        <li>Call SMG dlls(map engine) to draw map on map view</li>
+                                        <li>Call interfaces defined in other dlls to fulfill some functionalities</li>
+                                    </ol>
+                                </td>
+                                <td>MapChina.exe</td>
+                            </tr>
+                            <tr>
+                                <td>Hawk Eye</td>
+                                <td>Look down the map from air (<a href="images/hawkeye.jpg" target="_blank">hawkeye map</a>)</td>
+                                <td>HawkEye.pmc</td>
+                            </tr>
+                            <tr>
+                                <td>Bus Route Search</td>
+                                <td>
+                                    <ol>
+                                        <li>Search bus routes of every city in China</li>
+                                        <li>Input prompt for the beginning point and ending point</li>
+                                        <li>Find out all buses available from beginning point to destionation and display in HTML file (<a href="images/bus.jpg" target="_blank">available bus routes</a>)</li>
+                                        <li>Locate bus route on may when selecting (<a href="images/bus1.jpg" target="_blank">locate bus route on map</a>)</li>
+                                    </ol>
+                                </td>
+                                <td>Bus.pmc</td>
+                            </tr>
+                            <tr>
+                                <td>Sqlite operation</td>
+                                <td>Wrap all sqlite database operations</td>
+                                <td>basic_script.dll</td>
+                            </tr>
+                            <tr>
+                                <td>About</td>
+                                <td>System about module</td>
+                                <td>About.dll</td>
+                            </tr>
+                            <tr>
+                                <td>Road Book</td>
+                                <td>
+                                    <ol>
+                                        <li>Design a road book in MapChina 2007</li>
+                                        <li>Upload a road book to the internet server in LingTu Software</li>
+                                        <li>Download a road book from the internet server in LingTu Software (<a href="images/roadbookDownload.jpg" target="_blank">download road book</a>)</li>
+                                    </ol>
+                                </td>
+                                <td>RoadMapDBMag.dll</td>
+                            </tr>
+                            <tr>
+                                <td>RoadMap</td>
+                                <td>Encapsulate the interfaces of SMG dlls(map engine) which are used to draw map on map view</td>
+                                <td>RoadMapView.pmc</td>
+                            </tr>
+                            <tr>
+                                <td>Route Design</td>
+                                <td>Design routes for some components like bus search, driving navigation etc. It contains the algorism of calculating a most appropriate route</td>
+                                <td>RouteDesign.pmc</td>
+                            </tr>
+                            <tr>
+                                <td>System Skin</td>
+                                <td>
+                                    <ol>
+                                        <li>Change the skin of menu bar</li>
+                                        <li>Change the skin of tool bar</li>
+                                        <li>Change the skin of all dialogues</li>
+                                        <li>Change the skin of all controls</li>
+                                    </ol>
+                                </td>
+                                <td>SkinUI.dll</td>
+                            </tr>
+                            <tr>
+                                <td>City Specialty</td>
+                                <td>
+                                    <ol>
+                                        <li>Search special food of a selected city</li>
+                                        <li>Search shopping malls of a selected city</li>
+                                        <li>Search entertainment places of a selected city</li>
+                                    </ol>
+                                </td>
+                                <td>special.pmc</td>
+                            </tr>
+                            <tr>
+                                <td>Train time table</td>
+                                <td>
+                                    <ol>
+                                        <li>Search available trains according to departure station and destination</li>
+                                        <li>Search available trains according to station name. In other words, which trains pass this railway station</li>
+                                        <li>Search available trains according to train number</li>
+                                        <li>Input prompt for departure station, destination and station name</li>
+                                        <li>Find out all available trains and display in HTML file (<a href="images/train.jpg" target="_blank">available train routes</a>)</li>
+                                        <li>Look up all stations of a selected train route (<a href="images/train1.jpg" target="_blank">stations of a train route</a>)</li>
+                                    </ol>
+                                </td>
+                                <td>TrainTable.pmc</td>
+                            </tr>
+                            <tr>
+                                <td>Travel Guidance</td>
+                                <td>
+                                    <ol>
+                                        <li>Scenic spot search (<a href="images/travel.jpg" target="_blank">search view</a>)</li>
+                                        <li>Display all scenic spots which contain the key word (<a href="images/travel1.jpg" target="_blank">display spots</a>)</li>
+                                        <li>Display introduction of a scenic spot (<a href="images/travel2.jpg" target="_blank">introduction</a>)</li>
+                                        <li>Locate the scenic spot on map (<a href="images/travel3.jpg" target="_blank">locating</a>)</li>
+                                    </ol>
+                                </td>
+                                <td>travel.pmc</td>
+                            </tr>
+                            <tr>
+                                <td>Update MapChina 2007 Online</td>
+                                <td>Update MapChina 2007 Online, replace some old version components with the latest version. In addition, update sqlite database or some configuration files</td>
+                                <td>Updater.pmc</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
             </div>
 
             <div ui-if="activeTab == 2">

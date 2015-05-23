@@ -220,3 +220,48 @@
 #oracleFunction h5{
     font-weight: bold;
 }
+
+#MapChinaVideo{
+    margin: 15px;
+}
+
+#MapChinaBasicInfo{
+    margin-left: 15px;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid black;
+	margin: 10px auto;
+}
+caption {
+	font-weight: bold;
+	font-size: 120%;
+	padding-bottom: .25em;
+}
+thead, tfoot {
+	background-color: aqua;
+	font-weight: bold;
+	border: 1px solid black;
+}
+th, td {
+	padding: .2em .7em;
+	text-align: right;
+	border: 1px solid black;
+}
+th:first-child, td:first-child {
+	text-align: center;
+}
+th:nth-child(2), td:nth-child(2) {
+	text-align: left;
+}
+tbody tr:nth-child(even) {
+	background-color: silver;
+}
+
+#MapChinaArchitecture{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+
