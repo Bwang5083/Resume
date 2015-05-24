@@ -196,6 +196,7 @@
 }
 
 .databaseENV{
+    clear: both;
     float: left;
     text-align: left;
     margin: 15px auto;
