@@ -5,14 +5,97 @@
 <div class="scrollable">
     <div class="scrollable-content">
         <div class="section">
-            <div class="panel-group" ui-state='myAccordion' ui-default='1'>
+            <div class="panel-group" ui-state='myAccordion' ui-default='2'>
+                <!--Farm Management Project-->
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 1}">
+                        <h4 class="panel-title">Farm Management </h4>
+                    </div>
+                    <div ui-if="myAccordion == 1" ui-scope-context='1'>
+                        <div class="panel-body">
+                            <div id="BusserviceHeader">
+                                <div id="DevelopEnv">
+                                    <h4>Basic Information: </h4>
+                                    <h5><strong>Platform:</strong> Windows Operation System</h5>
+                                    <h5><strong>Language:</strong> ASP.net, MVC, SQL, HTML, CSS</h5>
+                                    <h5><strong>Development Tool:</strong> Visual Studio 2013</h5>
+                                    <h5><strong>Database:</strong> SQL Server 2012</h5>
+                                    <h5><strong>Functions:</strong> </h5>
+                                    <ol>
+                                        <li>Add, Edit and Delete a farm</li>
+                                        <li>Field validation (<a href="images/validation.jpg" target="_blank">validation</a>)</li>
+                                        <li>Localization</li>
+                                    </ol>
+                                </div>
+                                <div id="MapAudio">
+                                    <audio src="" type='audio/mp3' autoplay />
+                                </div>
+                                <div id="BusserviceHpage">
+                                    <a href="images/farmManagement.mp4" target="_blank">
+                                        <video src="images/farmManagement.mp4" type='video/mp4' height="300" poster="images/farmManagement.jpg" controls autoplay loop/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="FarmSection">
+                                <h4>Functionalities: </h4>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>1. Add, Edit and Delete a farm</h5>
+                                        <ul>
+                                            <li>Create a new farm</li>
+                                            <li>Delete a farm</li>
+                                            <li>Update a farm's information</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/addFarm.jpg" target="_blank">
+                                            <img src="images/addFarm.jpg" alt="add farm" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>2. Field validation</h5>
+                                        <ul>
+                                            <li>Create a metadata class to validate fields instead of editing in generated farm class (<a href="images/farmMetaData.cs" target="_blank">metadata</a>)</li>
+                                            <li>Generate Validate function to validate fields </li>
+                                            <li>User remote controller to validate a field (<a href="images/RemoteController.cs" target="_blank">remote controller</a>)</li>
+                                            <li>Generate a class library and create a validation class to do validation work (<a href="images/PostalCodeValidation.cs" target="_blank">library</a>)</li>
+                                            <li>User build-in validation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/validation.jpg" target="_blank">
+                                            <img src="images/validation.jpg" alt="field validation" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>3. Localization</h5>
+                                        <ul>
+                                            <li>Localizing to English</li>
+                                            <li>Localizing to Chinese</li>
+                                            <li>Localizing to French</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/farmLocalization.jpg" target="_blank">
+                                            <img src="images/farmLocalization.jpg" alt="farm localization" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!--Bus Service Project-->
                 <div class="panel panel-default">
-                    <div class="panel-heading" ui-set="{'myAccordion': 1}">
+                    <div class="panel-heading" ui-set="{'myAccordion': 2}">
                         <h4 class="panel-title">Bus Service </h4>
                     </div>
-                    <div ui-if="myAccordion == 1" ui-scope-context='1'>
+                    <div ui-if="myAccordion == 2" ui-scope-context='2'>
                         <div class="panel-body">
                             <div id="BusserviceHeader">
                                 <div id="DevelopEnv">
@@ -171,18 +254,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Farm Management Project-->
-                <div class="panel panel-default">
-                    <div class="panel-heading" ui-set="{'myAccordion': 2}">
-                        <h4 class="panel-title">Patient System </h4>
-                    </div>
-                    <div ui-if="myAccordion == 2" ui-scope-context='2'>
-                        <div class="panel-body">
-                            ongoing
                         </div>
                     </div>
                 </div>

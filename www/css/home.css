@@ -135,6 +135,17 @@
     box-shadow:0 0 3px 3px;
 }
 
+#FarmSection{
+    border: 3px double #8B0000;
+	border-radius: 5px;
+	margin: 10px 12px;
+	padding: 10px 12px;
+    height: 700px;
+	-moz-box-shadow:0 0 3px 3px;
+    -webkit-box-shadow:0 0 3px 3px;
+    box-shadow:0 0 3px 3px;
+}
+
 .Function{
     clear: both;
 }
