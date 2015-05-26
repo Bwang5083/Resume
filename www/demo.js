@@ -217,6 +217,7 @@ app.controller('MainController', function($rootScope, $scope){
 
   $scope.bottomReached = function() {
     //alert('Congrats you scrolled to the end of the list!');
+
   }
 
   //
