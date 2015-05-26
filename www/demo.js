@@ -216,7 +216,7 @@ app.controller('MainController', function($rootScope, $scope){
   $scope.scrollItems = scrollItems;
 
   $scope.bottomReached = function() {
-    alert('Congrats you scrolled to the end of the list!');
+    //alert('Congrats you scrolled to the end of the list!');
   }
 
   //
