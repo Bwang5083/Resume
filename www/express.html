@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>file server</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <style>
+        body {
+            font-family: tahoma, helvetica, arial, sans-serif;
+            text-align: left;
+            color: #6f6f6f;
+            border: 3px solid brown;
+            border-radius: 5px;
+            margin: 0 auto;
+            padding: 15px 30px;
+            width: 75%;
+            background: #FFE7BA;
+            -moz-box-shadow: 0 0 3px 3px;
+            -webkit-box-shadow: 0 0 3px 3px;
+            box-shadow: 0 0 3px 3px;
+        }
+
+        li {
+            margin: 8px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Set up a file server via node.js express</h3>
+    <ol>
+        <li>Write node.js express server code as below</li>
+        <code>
+            var express = require('express'),<br>
+            app = express();<br>
+            app.use(express.static(__dirname + '/public'));<br>
+            app.listen(8080);
+        </code>
+        <li>Install node.js express</li>
+        <li>Start express server application</li>
+        <a href="images/nodejsExpress.jpg" target="_blank"><img src="images/nodejsExpress.jpg" width="700" height="400" alt="nodejs express" /></a>
+        <li>Put some pictures or files under public folder</li>
+        <a href="images/nodejsExpress2.jpg" target="_blank"><img src="images/nodejsExpress2.jpg" width="700" height="400" alt="nodejs express" /></a>
+        <li>Access pictures via explorer</li>
+        <a href="images/nodejsExpress1.jpg" target="_blank"><img src="images/nodejsExpress1.jpg" width="700" height="400" alt="nodejs express" /></a>
+        <li>Access pdf document via explorer</li>
+        <a href="images/nodejsExpress3.jpg" target="_blank"><img src="images/nodejsExpress3.jpg" width="700" height="400" alt="nodejs express" /></a>
+    </ol>
+</body>
+
+</html>
