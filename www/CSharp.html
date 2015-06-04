@@ -1,5 +1,5 @@
 <div ui-content-for="title">
-    <span>Tabs</span>
+    <span>C# Application</span>
 </div>
 
 <div class="scrollable">
@@ -137,7 +137,78 @@
             </div>
 
             <div ui-if="activeTab == 2">
-                <h3 class="page-header">ongoing</h3>
+                <div id="MapAudio">
+                    <audio src="" type='audio/mp3' autoplay />
+                </div>
+                <div id="MapChinaVideo">
+                    <a href="images/WCF.mp4" target="_blank">
+                        <video src="images/WCF.mp4" type='video/mp4' height="450" poster="images/WCF.jpg" controls autoplay loop/>
+                    </a>
+                </div>
+
+                <div id="MapChinaBasicInfo">
+                    <h4>Basic Information: </h4>
+                    <h5><strong>Project Name:</strong> Chatting System</h5>
+                    <h5><strong>Platform:</strong> Windows Operation System</h5>
+                    <h5><strong>Language:</strong> C#, WCF, WPF, SQL</h5>
+                    <h5><strong>Development Tool:</strong> Visual Studio 2013</h5>
+                    <h5><strong>Database:</strong> SQL Server 2008</h5>
+                    <h5><strong>Functionalities:</strong> </h5>
+                    <h5><strong>&nbsp;&nbsp;&nbsp;&nbsp;WCF Service:</strong></h5>
+                    <ol>
+                        <li>Database access</li>
+                        <li>Declare and define interfaces which bridge client application and server application</li>
+                    </ol>
+                    <h5><strong>&nbsp;&nbsp;&nbsp;&nbsp;Server Application:</strong></h5>
+                    <ol>
+                        <li>Display online users</li>
+                        <li>Monitor chatting content of online users</li>
+                        <li>Chat with any end user</li>
+                    </ol>
+                    <h5><strong>&nbsp;&nbsp;&nbsp;&nbsp;Client Application:</strong></h5>
+                    <ol>
+                        <li>Display all friends of current user</li>
+                        <li>Chat with any friend</li>
+                        <li>Display chatting history</li>
+                    </ol>
+                </div>
+
+                <div id="MapChinaArchitecture">
+                    <h4>Architecture of Chatting System</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Description</th>
+                                <th>Output</th>
+                                <th>Implement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WCF Service</td>
+                                <td>Windows Communication Foundation (WCF) is a framework for building service-oriented applications. Using WCF, you can send data as asynchronous messages from one service endpoint to another. The interfaces defined in WCF service can be called on any endpoint(client application).</td>
+                                <td>Service.dll</td>
+                                <td><a href="images/WCFService.mp4" target="_blank">Declare and define interfaces in WCF service</a></td>
+                            </tr>
+                            <tr>
+                                <td>Server Application</td>
+                                <td>A WCF service can not run independently. It must parasitize on a host application. In this system, the server application is the host of WCF service.</td>
+                                <td>Host.exe</td>
+                                <td><a href="images/WCFServer.jpg" target="_blank">start WCF service on host application</a></td>
+                            </tr>
+                            <tr>
+                                <td>Client Application</td>
+                                <td>Import WCF service, call interfaces defined in WCF service to communicate with server application or other endpoint(client application).</td>
+                                <td>Client.exe</td>
+                                <td><a href="images/WCFClient.jpg" target="_blank">import WCF service in client application</a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
             </div>
 
             <div ui-if="activeTab == 3">
