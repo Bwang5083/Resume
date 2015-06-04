@@ -5,7 +5,7 @@
 <div class="scrollable">
     <div class="scrollable-content">
         <div class="section">
-            <div class="panel-group" ui-state='myAccordion' ui-default='2'>
+            <div class="panel-group" ui-state='myAccordion' ui-default='3'>
                 <div class="panel panel-default">
                     <div class="panel-heading" ui-set="{'myAccordion': 1}">
                         <h4 class="panel-title">IBM separation proof </h4>
@@ -23,6 +23,16 @@
                     <div ui-if="myAccordion == 2" ui-scope-context='2'>
                         <a href="images/reference.pdf" target="_blank">
                             <img src="images/IBMreference.jpg" alt="IBM Reference letter" />
+                        </a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 3}">
+                        <h4 class="panel-title">Reference from pastor </h4>
+                    </div>
+                    <div ui-if="myAccordion == 3" ui-scope-context='3'>
+                        <a href="images/pastor.pdf" target="_blank">
+                            <img src="images/PastorRef.jpg" alt="Pastor Reference letter" />
                         </a>
                     </div>
                 </div>
