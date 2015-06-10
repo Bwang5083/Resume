@@ -1,163 +1,140 @@
-.list-group-item-home{
+.list-group-item-home {
     height: 250px;
 }
-
-#photo{
+#photo {
     float: left;
     margin-left: 25px;
     border: 1px solid #8B2500;
 }
-
-#contact{
+#contact {
     margin-top: 35px;
 }
-
-#objective h2{
+#objective h2 {
     float: left;
     margin-top: 12px;
     margin-left: 25px;
 }
-
-#objective p{
+#objective p {
     clear: both;
     text-align: left;
     margin: 10px 25px;
     font-size: 120%;
 }
-
-#skills h2{
+#skills h2 {
     float: left;
     margin-top: 12px;
     margin-left: 25px;
 }
-
-#skills ul{
+#skills ul {
     clear: both;
     text-align: left;
     font-size: 120%;
     margin: 10px 25px 10px 10px;
 }
-
-#portfolios h2{
+#portfolios h2 {
     float: left;
     margin-top: 12px;
     margin-left: 25px;
 }
-
-#portfolios ul{
+#portfolios ul {
     clear: both;
     list-style: none;
     text-align: left;
     font-size: 120%;
     margin-top: 10px;
 }
-
-#education h2{
+#education h2 {
     float: left;
     margin-top: 12px;
     margin-left: 25px;
 }
-
-#education ul{
+#education ul {
     clear: both;
     list-style: none;
     text-align: left;
     font-size: 120%;
     margin-top: 10px;
 }
-
-#WorkHistory h2{
+#WorkHistory h2 {
     float: left;
     margin-top: 12px;
     margin-left: 25px;
 }
-
-#WorkHistory h4{
+#WorkHistory h4 {
     clear: both;
     float: left;
     margin-left: 25px;
 }
-
-#WorkHistory ul{
+#WorkHistory ul {
     clear: both;
     text-align: left;
     font-size: 120%;
     margin-top: 10px;
 }
-
-#hobby h2{
+#hobby h2 {
     float: left;
     margin-top: 12px;
     margin-left: 25px;
 }
-
-#hobby ul{
+#hobby ul {
     clear: both;
     text-align: left;
     font-size: 120%;
     margin-top: 10px;
 }
-
-#BusserviceHeader{
+#BusserviceHeader {
     border: 3px double #8B0000;
-	border-radius: 5px;
-	margin: 10px 12px;
-	padding: 10px 12px;
+    border-radius: 5px;
+    margin: 10px 12px;
+    padding: 10px 12px;
     height: 335px;
-	-moz-box-shadow:0 0 3px 3px;
-    -webkit-box-shadow:0 0 3px 3px;
-    box-shadow:0 0 3px 3px;
+    -moz-box-shadow: 0 0 3px 3px;
+    -webkit-box-shadow: 0 0 3px 3px;
+    box-shadow: 0 0 3px 3px;
 }
-
-#DevelopEnv{
+#DevelopEnv {
     float: left;
-    <!--width: 300px;-->
-    position: relative;
+    <!--width: 300px;
+    --> position: relative;
     width: 40%;
 }
-
-#BusserviceHpage{
+#BusserviceHpage {
     float: left;
     border: 1px solid black;
     position: relative;
     max-width: 60%;
     overflow: hidden;
 }
-
-#BusserviceSection{
+#BusserviceSection {
     border: 3px double #8B0000;
-	border-radius: 5px;
-	margin: 10px 12px;
-	padding: 10px 12px;
+    border-radius: 5px;
+    margin: 10px 12px;
+    padding: 10px 12px;
     height: 1300px;
-	-moz-box-shadow:0 0 3px 3px;
-    -webkit-box-shadow:0 0 3px 3px;
-    box-shadow:0 0 3px 3px;
+    -moz-box-shadow: 0 0 3px 3px;
+    -webkit-box-shadow: 0 0 3px 3px;
+    box-shadow: 0 0 3px 3px;
 }
-
-#FarmSection{
+#FarmSection {
     border: 3px double #8B0000;
-	border-radius: 5px;
-	margin: 10px 12px;
-	padding: 10px 12px;
+    border-radius: 5px;
+    margin: 10px 12px;
+    padding: 10px 12px;
     height: 700px;
-	-moz-box-shadow:0 0 3px 3px;
-    -webkit-box-shadow:0 0 3px 3px;
-    box-shadow:0 0 3px 3px;
+    -moz-box-shadow: 0 0 3px 3px;
+    -webkit-box-shadow: 0 0 3px 3px;
+    box-shadow: 0 0 3px 3px;
 }
-
-.Function{
+.Function {
     clear: both;
 }
-
-.BusserviceFunction{
+.BusserviceFunction {
     float: left;
     margin-top: 10px;
     position: relative;
     width: 40%;
 }
-
-.FunctionPage{
+.FunctionPage {
     float: left;
     border: 1px solid black;
     margin-top: 10px;
@@ -166,19 +143,17 @@
     max-width: 50%;
     overflow: hidden;
 }
-
-#WPFHeader{
+#WPFHeader {
     border: 3px double #8B0000;
-	border-radius: 5px;
-	margin: 10px 12px;
-	padding: 10px 12px;
+    border-radius: 5px;
+    margin: 10px 12px;
+    padding: 10px 12px;
     height: 335px;
-	-moz-box-shadow:0 0 3px 3px;
-    -webkit-box-shadow:0 0 3px 3px;
-    box-shadow:0 0 3px 3px;
+    -moz-box-shadow: 0 0 3px 3px;
+    -webkit-box-shadow: 0 0 3px 3px;
+    box-shadow: 0 0 3px 3px;
 }
-
-#WPFHpage{
+#WPFHpage {
     float: right;
     border: 1px solid black;
     margin-right: 10px;
@@ -186,96 +161,212 @@
     width: 58%;
     overflow: hidden;
 }
-
-#WPFSection{
+#WPFSection {
     border: 3px double #8B0000;
-	border-radius: 5px;
-	margin: 10px 12px;
-	padding: 10px 12px;
+    border-radius: 5px;
+    margin: 10px 12px;
+    padding: 10px 12px;
     height: 1150px;
-	-moz-box-shadow:0 0 3px 3px;
-    -webkit-box-shadow:0 0 3px 3px;
-    box-shadow:0 0 3px 3px;
+    -moz-box-shadow: 0 0 3px 3px;
+    -webkit-box-shadow: 0 0 3px 3px;
+    box-shadow: 0 0 3px 3px;
 }
-
-.WPFFunction{
+.WPFFunction {
     clear: both;
     float: left;
     margin-top: 10px;
     position: relative;
     width: 40%;
 }
-
-.databaseENV{
+.databaseENV {
     clear: both;
     float: left;
     text-align: left;
     margin: 15px auto;
     max-width: 43%;
 }
-
-.databasePage{
+.databasePage {
     position: relative;
     margin: 15px auto;
     max-width: 53%;
     overflow: hidden;
 }
-
-.oracleENV{
+.oracleENV {
+    margin: 15px 10px;
+}
+#oracleFunction {
     margin: 15px 10px;
 }
 
-#oracleFunction{
-    margin: 15px 10px;
-}
-
-#oracleFunction h5{
+#oracleFunction h5 {
     font-weight: bold;
 }
 
-#MapChinaVideo{
+#WCFBasicInfo{
+    margin: 0 15px;
+    height: 465px;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(105, 105, 105, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+#MapChinaVideo {
     margin: 15px;
 }
-
-#MapChinaBasicInfo{
-    margin-left: 15px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid grey;
+#MapChinaBasicInfo {
+    margin: 0 15px;
+    height: 385px;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(105, 105, 105, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
 }
-
+#MapChinaBasicInfo article {
+    width: 45%;
+    float: left;
+}
+#MapChinaBasicInfo img {
+    width: 53%;
+    border: 1px solid black;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    min-height: 315px;
+}
 table {
-	border-collapse: collapse;
-	border: 1px solid black;
-	margin: 10px auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: 10px auto;
 }
 caption {
-	font-weight: bold;
-	font-size: 120%;
-	padding-bottom: .25em;
+    font-weight: bold;
+    font-size: 120%;
+    padding-bottom: .25em;
 }
-thead, tfoot {
-	background-color: aqua;
-	font-weight: bold;
-	border: 1px solid black;
+thead,
+tfoot {
+    background-color: aqua;
+    font-weight: bold;
+    border: 1px solid black;
 }
-th, td {
-	padding: .2em .7em;
-	text-align: right;
-	border: 1px solid black;
+th,
+td {
+    padding: .2em .7em;
+    text-align: right;
+    border: 1px solid black;
 }
-th:first-child, td:first-child {
-	text-align: center;
+th:first-child,
+td:first-child {
+    text-align: center;
 }
-th:nth-child(2), td:nth-child(2) {
-	text-align: left;
+th:nth-child(2),
+td:nth-child(2) {
+    text-align: left;
 }
 tbody tr:nth-child(even) {
-	background-color: silver;
+    background-color: silver;
 }
-
-#MapChinaArchitecture{
+#MapChinaArchitecture {
+    clear: both;
     margin-left: 15px;
     margin-top: 20px;
 }
+#XMLBasicInfo {
+    margin: 0 15px;
+    height: 315px;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(105, 105, 105, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
 
+#XMLBasicInfo article{
+    float: left;
+    width: 52%;
+}
 
+#XMLBasicInfo aside{
+    float: left;
+    width: 45%;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+    padding: 1em;
+    color: darkcyan;
+    background-color: beige;
+}
+
+#XMLBasicInfo aside img{
+    float: right;
+    margin-left: 3px;
+}
+
+#XMLTable {
+    clear: both;
+    margin: 20px 20px;
+}
+#XianBasicInfo {
+    border: 2px double #8B0000;
+    border-radius: 5px;
+    margin: 10px 12px;
+    padding: 15px 18px;
+    height: 300px;
+    -moz-box-shadow: 0 0 3px 3px;
+    -webkit-box-shadow: 0 0 3px 3px;
+    box-shadow: 0 0 3px 3px;
+}
+#XianFunction {
+    border: 2px double #8B0000;
+    border-radius: 5px;
+    margin: 10px 12px;
+    padding: 10px 16px;
+    height: 2250px;
+    -moz-box-shadow: 0 0 3px 3px;
+    -webkit-box-shadow: 0 0 3px 3px;
+    box-shadow: 0 0 3px 3px;
+}
+#XianFunction li {
+    margin: 15px 0;
+}
+
+#XianBasicInfo article{
+    float: left;
+    width: 52%;
+}
+
+#XianBasicInfo aside {
+    float: left;
+    width: 45%;
+    border: 2px solid firebrick;
+    border-radius: 5px;
+    padding: 1em;
+    color: darkcyan;
+}
+
+#XianBasicInfo aside img{
+    float: left;
+    margin-right: 8px;
+    border: 1px solid black;
+}

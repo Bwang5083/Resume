@@ -12,13 +12,13 @@
                     <a ui-set="{'activeTab': 1}">MapChina 2007</a>
                 </li>
                 <li ui-class="{'active': activeTab == 2}">
-                    <a ui-set="{'activeTab': 2}">ATL</a>
+                    <a ui-set="{'activeTab': 2}">XML File Editor</a>
                 </li>
                 <li ui-class="{'active': activeTab == 3}">
-                    <a ui-set="{'activeTab': 3}">STL</a>
+                    <a ui-set="{'activeTab': 3}">Quotation Generator</a>
                 </li>
                 <li ui-class="{'active': activeTab == 4}">
-                    <a ui-set="{'activeTab': 4}">SOCKET</a>
+                    <a ui-set="{'activeTab': 4}">Xian Aircraft</a>
                 </li>
             </ul>
 
@@ -28,28 +28,33 @@
                 </div>
                 <div id="MapChinaVideo">
                     <a href="images/MapChina.mp4" target="_blank">
-                        <video src="images/MapChina.mp4" type='video/mp4' height="450" poster="images/MapChina.jpg" controls autoplay loop/>
+                        <video src="images/MapChina.mp4" type='video/mp4' height="465" poster="images/MapChina.jpg" controls autoplay loop/>
                     </a>
                 </div>
 
                 <div id="MapChinaBasicInfo">
-                    <h4>Basic Information: </h4>
-                    <h5><strong>Project Name:</strong> MapChina 2007</h5>
-                    <h5><strong>Platform:</strong> Windows Operation System</h5>
-                    <h5><strong>Language:</strong> C++, STL, MFC, COM, Windows Hook, HTML</h5>
-                    <h5><strong>Development Tool:</strong> Visual C++ 6.0</h5>
-                    <h5><strong>Database:</strong> sqlite</h5>
-                    <h5><strong>Functions:</strong> </h5>
-                    <ol>
-                        <li>Public Transport Searching</li>
-                        <li>Driving Navigation</li>
-                        <li>Train Time Table</li>
-                        <li>City Introduction</li>
-                        <li>Tourist Guidance</li>
-                        <li>City List</li>
-                        <li>Roadmap</li>
-                        <li>Interface with portable device</li>
-                    </ol>
+                    <article>
+                        <h4>Basic Information: </h4>
+                        <h5><strong>Project Name:</strong> MapChina 2007</h5>
+                        <h5><strong>Platform:</strong> Windows Operation System</h5>
+                        <h5><strong>Language:</strong> C++, STL, MFC, COM, Windows Hook, HTML</h5>
+                        <h5><strong>Development Tool:</strong> Visual C++ 6.0</h5>
+                        <h5><strong>Database:</strong> sqlite</h5>
+                        <h5><strong>Functions:</strong> </h5>
+                        <ol>
+                            <li>Public Transport Searching</li>
+                            <li>Driving Navigation</li>
+                            <li>Train Time Table</li>
+                            <li>City Introduction</li>
+                            <li>Tourist Guidance</li>
+                            <li>City List</li>
+                            <li>Roadmap</li>
+                            <li>Interface with portable device</li>
+                        </ol>
+                    </article>
+                    <a href="images/MapChina.jpg" target="_blank">
+                        <img src="images/MapChina.jpg" alt="mapchina pic" />
+                    </a>
                 </div>
 
                 <div id="MapChinaArchitecture">
@@ -189,15 +194,183 @@
             </div>
 
             <div ui-if="activeTab == 2">
-                <h3 class="page-header">ongoing</h3>
+                <div id="MapAudio">
+                    <audio src="" type='audio/mp3' autoplay />
+                </div>
+                <div id="MapChinaVideo">
+                    <a href="images/XML.mp4" target="_blank">
+                        <video src="images/XML.mp4" type='video/mp4' height="450" poster="images/XML.jpg" controls autoplay loop/>
+                    </a>
+                </div>
+
+                <div id="XMLBasicInfo">
+                    <article>
+                        <h4>Basic Information: </h4>
+                        <h5><strong>Project Name:</strong> XML File Editor</h5>
+                        <h5><strong>Platform:</strong> Windows Operation System</h5>
+                        <h5><strong>Language:</strong> C++, MFC, XML API</h5>
+                        <h5><strong>Middle Ware:</strong> msxml4.dll</h5>
+                        <h5><strong>Development Tool:</strong> Visual C++ 6.0</h5>
+                        <h5><strong>XML File:</strong> <a href="images/PamSysLofSettings.price_list.xml" target="_blank">PamSysLofSettings.price_list.xml</a></h5>
+                        <h5><strong>Functionalities:</strong> </h5>
+                        <ol>
+                            <li>Display the content of XML file in window</li>
+                            <li>Add a new node to XML tree</li>
+                            <li>Update a node of XML tree</li>
+                            <li>Remove a node from XML tree</li>
+                        </ol>
+                    </article>
+                    <aside>
+                        <img src="images/quotationpic.jpg" alt="quotation pic" width="85" />
+                        <p>This project is designed and developed for a third part company ESI. The company requested us to develop a tool through which they can edit a XML file. In other words, the customer wants a tool to add, delete and update a XML file. In the past, they do this job mannually which is time-consuming and boring. This is a general tool which can be used to edit any XML file.</p>
+                    </aside>
+                </div>
+
+                <div id="XMLTable">
+                    <h4>Architecture of XML File Editor</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Description</th>
+                                <th>Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Main Project</td>
+                                <td>
+                                    <ol>
+                                        <li>Re-encapsulate(overload) XML API defined in middle ware, add some customized features</li>
+                                        <li>Add a new node to XML tree, then save to XML file</li>
+                                        <li>Update the information of a XML tree node, then save to XML file</li>
+                                        <li>Remove a node from XML tree as well as XML file</li>
+                                    </ol>
+                                </td>
+                                <td>ModifyXML.exe</td>
+                            </tr>
+                            <tr>
+                                <td>Middle Ware</td>
+                                <td>Import this middle ware to invoke XML API</td>
+                                <td>msxml4.dll</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div ui-if="activeTab == 3">
-                <h3 class="page-header">ongoing</h3>
+                <div id="MapAudio">
+                    <audio src="" type='audio/mp3' autoplay />
+                </div>
+                <div id="MapChinaVideo">
+                    <a href="images/quotation.mp4" target="_blank">
+                        <video src="images/quotation.mp4" type='video/mp4' height="450" poster="images/quotation.jpg" controls autoplay loop/>
+                    </a>
+                </div>
+
+                <div id="XMLBasicInfo">
+                    <article>
+                        <h4>Basic Information: </h4>
+                        <h5><strong>Project Name:</strong> Quotation Generator</h5>
+                        <h5><strong>Platform:</strong> Windows Operation System</h5>
+                        <h5><strong>Language:</strong> C++, MFC, XML API, Microsoft Office API</h5>
+                        <h5><strong>Middle Ware:</strong> msxml4.dll</h5>
+                        <h5><strong>Development Tool:</strong> Visual C++ 6.0</h5>
+                        <h5><strong>XML File:</strong> <a href="images/PamSysLofSettings.price_list.xml" target="_blank">PamSysLofSettings.price_list.xml</a></h5>
+                        <h5><strong>Functionalities:</strong> </h5>
+                        <ol>
+                            <li>Extract data from XML file and display in window</li>
+                            <li>Form a product price list</li>
+                            <li>Generate quotation report(<a href="images/quotation.xls" target="_blank">example report</a>)</li>
+                        </ol>
+                    </article>
+                    <aside>
+                        <img src="images/quotationpic.jpg" alt="quotation pic" width="85" />
+                        <p>This project is designed and developed for a third part company ESI. The company provides us with a XML file which contains all its products' price. The requirement is to extract the XML file and display the products' price on interface for users to select. User can create a dynamic product price list in system, then generate a Excel version quotation report via this system.</p>
+                    </aside>
+                </div>
+
+                <div id="XMLTable">
+                    <h4>Architecture of Quotation Generator</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Description</th>
+                                <th>Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Main Project</td>
+                                <td>
+                                    <ol>
+                                        <li>Extract data from XML file and generate product dropdown list (<a href="images/quotation1.jpg" target="_blank">illustration</a>)</li>
+                                        <li>Generate package dropdown list according to selected product</li>
+                                        <li>Generate module dropdown list according to selected package</li>
+                                        <li>Generate product price list</li>
+                                        <li>Generate the final Excel quotation report (<a href="images/quotation.xls" target="_blank">example report</a>)</li>
+                                    </ol>
+                                </td>
+                                <td>MakePriceFile.exe</td>
+                            </tr>
+                            <tr>
+                                <td>Middle Ware</td>
+                                <td>Import this middle ware to invoke XML API</td>
+                                <td>msxml4.dll</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div ui-if="activeTab == 4">
-                <h3 class="page-header">ongoing</h3>
+                <div id="XianBasicInfo">
+                    <article>
+                        <h4>Basic Information: </h4>
+                        <h5><strong>Project Name:</strong> Xian Aircraft Project</h5>
+                        <h5><strong>Platform:</strong> Windows Operation System</h5>
+                        <h5><strong>Language:</strong> C++, MFC, STL, GUI</h5>
+                        <h5><strong>Middle Ware:</strong> MSO.DLL, MSWORD.OLB</h5>
+                        <h5><strong>Development Tool:</strong> Visual C++ 6.0</h5>
+                        <h5><strong>Functionalities:</strong> </h5>
+                        <ol>
+                            <li>Verify aircraft design parameters</li>
+                            <li>Verify horizontal empennage design</li>
+                            <li>Verify vertical empennage design</li>
+                            <li>Generate word version report</li>
+                        </ol>
+                    </article>
+                    <aside>
+                        <img src="images/aircraft.jpg" alt="aircraft pic" width="175" />
+                        <p>This project is designed and developed for AVIC XI'AN AIRCRAFT INDUSTRY(GROUP) COMPANY LTD. Two doctors of Northwestern Polytechnical University are responsible to collect requirements and complete the requirement document. I assisted them to do software development relevant work.</p>
+                    </aside>
+                </div>
+
+                <div id="XianFunction">
+                    <ol>
+                        <h4><li>Verify aircraft design parameters:</li></h4>
+                        <p>Develop an executable(HVModel.exe) with VC++ to verify the aircraft design parameters.</p>
+                        <strong><p>Input: a txt file which contains all the design parameters (<a href="images/qualityfile.txt" target="_blank">design parameter input file</a>).</p></strong>
+                        <strong><p>Output: a parameter check list, tick means the parameter is correct, cross means the parameter is wrong.</p></strong>
+                        <img src="images/quality.jpg" alt="quality verification" />
+                        <h4><li>Verify horizontal empennage design:</li></h4>
+                        <p>Develop an executable(Tail.exe) with VC++ to verify the horizontal empennage design parameters.</p>
+                        <strong><p>Input: a txt file which contains all the design parameters (<a href="images/htailfile.txt" target="_blank">horizontal empennage design input file</a>).</p></strong>
+                        <strong><p>Output: a line chart in which each line represents a specific parameter.</p></strong>
+                        <img src="images/htail.jpg" alt="horizontal empennage" />
+                        <h4><li>Verify vertical empennage design:</li></h4>
+                        <p>Develop an executable(VTail.exe) with VC++ to verify the vertical empennage design parameters.</p>
+                        <strong><p>Input: a txt file which contains all the design parameters (<a href="images/vtailfile.txt" target="_blank">vertical empennage design input file</a>).</p></strong>
+                        <strong><p>Output: a line chart in which each line represents a specific parameter.</p></strong>
+                        <img src="images/vtail.jpg" alt="vertical empennage" />
+                        <h4><li>Generate word version report:</li></h4>
+                        <p>Develop an executable(txtword.exe) with VC++ to generate a word version report.</p>
+                        <strong><p>Input: a txt file which contains all parameters.</p></strong>
+                        <strong><p>Output: a word report (<a href="images/wordreport.doc" target="_blank">sample report</a>).</p></strong>
+                    </ol>
+                </div>
             </div>
         </div>
 
