@@ -26,6 +26,7 @@ app.config(function($routeProvider) {
   $routeProvider.when('/ASP',        {templateUrl: 'ASP.html', reloadOnSearch: false});
   $routeProvider.when('/CSharp',          {templateUrl: 'CSharp.html', reloadOnSearch: false});
   $routeProvider.when('/CPlus',       {templateUrl: 'CPlus.html', reloadOnSearch: false});
+    $routeProvider.when('/LinuxC',       {templateUrl: 'LinuxC.html', reloadOnSearch: false});
   $routeProvider.when('/Database',         {templateUrl: 'Database.html', reloadOnSearch: false});
   $routeProvider.when('/COM',      {templateUrl: 'COM.html', reloadOnSearch: false});
   $routeProvider.when('/conestoga',          {templateUrl: 'conestoga.html', reloadOnSearch: false});
