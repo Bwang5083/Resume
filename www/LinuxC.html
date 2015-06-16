@@ -29,6 +29,83 @@
             </div>
 
             <div id="LSFBody">
+                <div id="resources">
+                    <p class="open">+</p>
+                    <h2>Test Beds</h2>
+                    <ul class="nav">
+                        <li><a href="selectors.html">jQuery Selectors Testbed</a>
+                        </li>
+                        <li><a href="content_functions.html">jQuery Content Functions Test Bed</a>
+                        </li>
+                        <li><a href="events.html">Events Test Bed</a>
+                        </li>
+                        <li><a href="effects.html">jQuery Effects Test Bed</a>
+                        </li>
+                        <li><a href="array_methods.html">Array Methods</a>
+                        </li>
+                        <li><a href="regex_tester.html">Regular Expression Tester</a>
+                        </li>
+                    </ul>
+                    <h2>jQuery Resources</h2>
+                    <ul class="nav">
+                        <li><a href="http://jquery.com">jQuery</a>
+                        </li>
+                        <li><a href="http://jqueryui.com/">jQuery UI</a>
+                        </li>
+                        <li><a href="http://jquerymobile.com/">jQuery Mobile</a>
+                        </li>
+                        <li><a href="http://jqapi.com/">jQAPI.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="daemon">
+                    <article>
+                        <h5><strong>LSF Daemons: (<a href="images/LSF1.jpg" target="_blank">chart</a>)</strong></h5>
+                        <ol>
+                            <li><strong>LIM - Load Information Manager</strong>
+                                <br>master lim, receives load information from the LIMs running on hosts in the cluster periodically.
+                                <br>host lim, collects host load and configuration information and forwards it to the master LIM running on the master host.
+                            </li>
+                            <li><strong>MBD - Master Batch Daemon</strong>, running on the master host. Responsible for the overall state of jobs in the system. Receives job submission, and information query requests. Manages jobs held in queues. Dispatches jobs to hosts as determined by mbschd.</li>
+                            <li><strong>MBSCHD - Master Batch Scheduler Daemon</strong>, running on the master host. Works with mbatchd. Makes scheduling decisions based on job requirements and policies.</li>
+                            <li><strong>SBD - Slave Batch Daemon</strong>, running on each server host. Receives the request to run the job from mbatchd and manages local execution of the job. Responsible for enforcing local policies and maintaining the state of jobs on the host.</li>
+                            <li><strong>RES - Remote Execution Server</strong>, running on each server host. Accepts remote execution requests to provide transparent and secure remote execution of jobs and tasks.</li>
+                            <li><strong>PIM - Process Information Manager</strong>, running on each server host. Collects information about job processes running on the host such as CPU and memory used by the job, and reports the information to sbatchd.</li>
+                        </ol>
+                    </article>
+                </div>
+
+                <div id="workflow">
+                    <h5><strong>LSF Workflow: (<a href="images/LSF3.jpg" target="_blank">chart</a>)</strong></h5>
+                    <ol>
+                        <li><strong>Job Submission (<a href="images/LSF5.jpg" target="_blank">chart</a>) - </strong>User may submit one or multiple jobs on any host in the cluster via bsub command(windows: bsub.exe), mbatchd which running on master host is forever ready to accept new job from any host.</li>
+                        <img src="images/LSF7.jpg" alt="job submission" width="500" height="200" />
+                        <li><strong>Enqueue new jobs - </strong>Mbatchd daemon would enqueue the new submitted jobs. It maintains a job linked list in memory. Each linked node is a job card which contains the detailed job information. Mbatchd daemon reads this linked list  and dispatches a batch of jobs to idle hosts in cluster periodically.</li>
+                        <li><strong>Make Scheduling Decision (<a href="images/LSF4.jpg" target="_blank">chart</a>) - </strong>Synchronize jobs maintained in mbatchd job queue to mbschd job queue periodically. Mbschd is repsonsible to make decision which hosts these jobs may run on according to some customized policies.</li>
+                        <li><strong>Job Distribution - </strong>Mbschd synchronizes job scheduling decision to mbatchd periodically. Mbatchd distributes these jobs to hosts to run according to scheduling decision.</li>
+                        <li><strong>Run Job (<a href="images/LSF6.jpg" target="_blank">chart</a>) - </strong>Mbatchd distributes a job to one or multiple hosts to run. Sbatchd on hosts accepts the job and run it.</li>
+                        <li><strong>Report Job Status - </strong>PIM daemon on every host is responsible to collect job process information and report to sbatchd periodically. Then sbatchd synchronizes the job status to mbatchd running on the master host periodically. User may check the job status on any host by running bjobs command(windows: bjobs.exe) which retrieve job status from mbatchd daemon.</li>
+                        <img src="images/LSF9.jpg" alt="bjob command" width="500" height="200" />
+                        <li><strong>Job Done - </strong>Sbatchd goes ahead to run next job. Users may check the completed jobs' status by running bhist command(windows: bhist.exe).</li>
+                        <img src="images/LSF8.jpg" alt="job history" width="500" height="200" />
+                    </ol>
+                </div>
+
+                <div id="gdbdebug">
+                    <h5><strong>Locates bug with gdb:</strong></h5>
+                    <ol>
+                        <li>Collecting log files from customer which help us narrow down the issue.</li>
+                        <li>Ensure which daemon the bug belongs to, then build a new executable with debug information(Linux version or Windows version). Add break points at some suspicious code lines. (<a href="images/LSFBuild.txt" target="_blank">building procedure</a>)</li>
+                        <li>Collecting configuration files and environment variables from customers. Then set up a similar working environment as customer's.</li>
+                        <li>Replace the initial daemon with debug version daemon, then restart the whole cluster. After that, start gdb and attatch the daemon. For example:</li>
+                        <img src="images/LSF10.jpg" alt="daemon attatch" width="550" height="235" />
+                        <li>Intend to reproduce the issue in house by following customer's steps.</li>
+                        <li>When system interrupt at any break point, trace the code and check the suspicious variables' value.</li>
+                        <li>Open system debug information if necessary.</li>
+                        <li>When core dump happens on customer site, compile an unstripped daemon to replace the original daemon in customer's cluster and collect core dump file for further investigation. (<a href="images/LSFcorefile.txt" target="_blank">core dump procedure</a>)</li>
+                        <li>Repeat above steps until finding out the root cause.</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </div>

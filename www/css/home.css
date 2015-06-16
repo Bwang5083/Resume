@@ -197,12 +197,10 @@
 #oracleFunction {
     margin: 15px 10px;
 }
-
 #oracleFunction h5 {
     font-weight: bold;
 }
-
-#WCFBasicInfo{
+#WCFBasicInfo {
     margin: 0 15px;
     height: 465px;
     font-family: 'ColaborateLightRegular', Arial, sans-serif;
@@ -217,7 +215,6 @@
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
 }
-
 #MapChinaVideo {
     margin: 15px;
 }
@@ -302,13 +299,11 @@ tbody tr:nth-child(even) {
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
 }
-
-#XMLBasicInfo article{
+#XMLBasicInfo article {
     float: left;
     width: 52%;
 }
-
-#XMLBasicInfo aside{
+#XMLBasicInfo aside {
     float: left;
     width: 45%;
     border: 2px solid darkcyan;
@@ -317,12 +312,10 @@ tbody tr:nth-child(even) {
     color: darkcyan;
     background-color: beige;
 }
-
-#XMLBasicInfo aside img{
+#XMLBasicInfo aside img {
     float: right;
     margin-left: 3px;
 }
-
 #XMLTable {
     clear: both;
     margin: 20px 20px;
@@ -350,12 +343,10 @@ tbody tr:nth-child(even) {
 #XianFunction li {
     margin: 15px 0;
 }
-
-#XianBasicInfo article{
+#XianBasicInfo article {
     float: left;
     width: 52%;
 }
-
 #XianBasicInfo aside {
     float: left;
     width: 45%;
@@ -364,13 +355,11 @@ tbody tr:nth-child(even) {
     padding: 1em;
     color: darkcyan;
 }
-
-#XianBasicInfo aside img{
+#XianBasicInfo aside img {
     float: left;
     margin-right: 8px;
     border: 1px solid black;
 }
-
 #LSFHeader {
     margin: 0 15px;
     height: 365px;
@@ -386,10 +375,8 @@ tbody tr:nth-child(even) {
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
 }
-
-#LSFBody{
+#LSFBody {
     margin: 8px 15px;
-    height: 1200px;
     font-family: 'ColaborateLightRegular', Arial, sans-serif;
     color: black;
     text-decoration: none;
@@ -402,13 +389,15 @@ tbody tr:nth-child(even) {
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
 }
-
-#LSFBasicInfo{
+#LSFBody img{
+    margin-bottom: 10px;
+    border: 1px solid lightblue;
+}
+#LSFBasicInfo {
     float: left;
     width: 40%;
 }
-
-#LSFInfraPic{
+#LSFInfraPic {
     float: left;
     width: 58%;
     margin-left: 8px;
@@ -416,3 +405,129 @@ tbody tr:nth-child(even) {
     position: relative;
     overflow: hidden;
 }
+#daemon{
+    margin: 10px 0;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(255, 0, 0, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+#daemon img {
+    border: 1px solid lightgrey;
+    position: relative;
+    overflow: hidden;
+}
+#daemon li{
+    margin: 5px 0;
+}
+#resources {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0em 1em 1em .75em;
+    position: absolute;
+    top: 10em;
+    left: -51em;
+    width: 50em;
+    -moz-border-radius: 0 0 .5em 0;
+    border-radius: 0 0 .5em 0;
+    display: none;
+}
+#resources .open {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    top: -20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    -moz-border-radius: 0.5em;
+    border-radius: .5em 0;
+    text-align: center;
+    font-family: 'ColaborateBoldRegular', Arial, sans-serif;
+    cursor: pointer;
+    color: rgb(119, 104, 71);
+    line-height: 100%;
+}
+#workflow{
+    margin: 10px 0;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(255, 0, 0, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+#workflow li{
+    margin: 5px 0;
+}
+
+#gdbdebug{
+    margin: 10px 0;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(255, 0, 0, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+<!--
+.slidePanel a {
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    background-color: white;
+    border: solid red 10px;
+}
+.slidePanel p {
+    margin-right: 60px;
+    color: black !important;
+}
+div.anythingSlider .anythingWindow {
+    /* remove borders above and below slider */
+    border: none;
+}
+div.anythingSlider .anythingControls {
+    /* reposition controls to top right */
+    position: absolute;
+    right: 55px;
+    top: 15px;
+}
+div.anythingSlider .anythingControls ul a {
+    background: none;
+    /* remove drop shadow	*/
+    border-radius: 0;
+    /*remove rounded corners */
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+div.anythingSlider.activeSlider .anythingControls ul a {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+div.anythingSlider.activeSlider .anythingControls ul a.cur {
+    background-color: red;
+    color: black;
+    border: 1px solid black;
+}
+div.anythingSlider.activeSlider .anythingControls ul a:hover {
+    background-color: white;
+    color: black;
+}
+-->

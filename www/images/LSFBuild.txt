@@ -1,0 +1,160 @@
+[binwang@bjit003 ~]$ pwd
+/home/binwang
+
+[binwang@bjit003 ~]$ ln -s /pcc/lsfqa-trusted/include/ ./include
+[binwang@bjit003 ~]$ ln -s /pcc/lsfqa-trusted/includeNT/ ./includeNT
+[binwang@bjit003 ~]$ ln -s /pcc/lsfqa-trusted/lib/ ./lib
+[binwang@bjit003 ~]$ ln -s /pcc/lsfqa-trusted/lsf_ext/ ./lsf_ext
+[binwang@bjit003 ~]$ ln -s /pcc/ ./pcc
+[binwang@bjit003 ~]$ ln -s /pcc/lsfqa-trusted/perf_ext/ ./perf_ext
+[binwang@bjit003 ~]$ ln -s /scratch// ./scratch
+[binwang@bjit003 ~]$ ln -s /pcc/lsfqa-trusted/vem_ext/ ./vem_ext
+[binwang@bjit003 ~]$ ll
+total 1834
+-rw-r--r-- 1 root    root  3281192 Jun  8  2012 ccc.res.log.delpe04
+-rw-r--r-- 1 root    root   470553 Jun  8  2012 ccc.sbatchd.log.delpe04
+drwxr-xr-x 3 root    root        3 Oct 26 12:14 cluster801
+-rwxr--r-- 1 binwang wheel     279 May 18  1999 cshrc.csh
+-rwxr--r-- 1 binwang wheel    2844 May 14  1999 environ.ksh
+lrwxrwxrwx 1 binwang wheel      26 Feb  4 16:26 flexlm -> /pcc/lsfqa-trusted/flexlm/
+lrwxrwxrwx 1 binwang wheel      27 Feb  4 16:26 include -> /pcc/lsfqa-trusted/include/
+lrwxrwxrwx 1 binwang wheel      29 Feb  4 16:27 includeNT -> /pcc/lsfqa-trusted/includeNT/
+lrwxrwxrwx 1 binwang wheel      23 Feb  4  2013 lib -> /pcc/lsfqa-trusted/lib/
+-rw-r--r-- 1 root    root      691 Oct 26 12:25 license.dat.80
+-rw-r--r-- 1 root    root      691 Oct 26 12:14 license.dat.80.7580
+-rw-r--r-- 1 binwang wheel     691 Oct 26 12:09 license.dat.80.old
+-rwxr--r-- 1 binwang wheel      69 May 18  1999 login.csh
+-rwxr--r-- 1 binwang wheel      66 May 18  1999 logout.csh
+drwxr-xr-x 3 root    root        3 Feb  4 11:49 lsf7.04_code
+drwxrwxrwx 6 root    root        6 Feb  4 12:18 lsf7.06_code
+drwxrwxr-x 6   33209 lsf        24 Oct 26 14:30 lsf8.0.1_lsfinstall
+-rwxr-xr-x 1 root    root   874549 Oct 26 11:54 lsf8.0.1_lsfinstall.tar.Z
+drwxrwxrwx 3 root    root        3 Feb  4 12:27 lsf8.0_code
+lrwxrwxrwx 1 binwang wheel      27 Feb  4  2013 lsf_ext -> /pcc/lsfqa-trusted/lsf_ext/
+drwxrwxrwx 3 binwang wheel       3 Feb  8  2012 lsf_src
+lrwxrwxrwx 1 binwang wheel       5 Feb  4  2013 pcc -> /pcc/
+lrwxrwxrwx 1 binwang wheel      28 Feb  4  2013 perf_ext -> /pcc/lsfqa-trusted/perf_ext/
+-rwxr--r-- 1 binwang wheel    1323 May 13  1999 profile.ksh
+lrwxrwxrwx 1 binwang wheel      10 Feb  4  2013 scratch -> /scratch//
+-rw-r--r-- 1 binwang wheel       0 Nov  8  2011 tmplsrcp_test1
+lrwxrwxrwx 1 binwang wheel      27 Feb  4  2013 vem_ext -> /pcc/lsfqa-trusted/vem_ext/
+
+
+ sqyang@bp860-10-64: cd lsf705
+ sqyang@bp860-10-65: ls
+ego/  utopia/
+ sqyang@bp860-10-66: cd ego
+ sqyang@bp860-10-69: ll
+total 3479
+drwxr-xr-x 11 sqyang wheel      13 Nov 13  2009 base/
+drwxr-xr-x  3 sqyang wheel      25 Nov 13  2009 cmd/
+drwxr-xr-x  3 sqyang wheel      43 Nov 13  2009 config/
+-r-xr-xr-x  1 sqyang wheel   24539 Sep 28  2008 config.h*
+drwxr-xr-x  2 sqyang wheel       7 Nov 13  2009 CVS/
+drwxr-xr-x  3 sqyang wheel       6 Nov 13  2009 doc/
+drwxr-xr-x  3 sqyang wheel       3 Apr  1  2010 ego_lsf_sdk/
+-rw-r--r--  1 sqyang wheel 3479125 Apr  1  2010 ego_lsf_sdk.linux2.6-glibc2.3-x86_64.tar.gz
+drwxr-xr-x  6 sqyang wheel       7 Nov 13  2009 eservice/
+drwxr-xr-x  6 sqyang wheel      16 Nov 13  2009 includeNT/
+drwxr-xr-x  9 sqyang wheel       9 Nov 13  2009 install/
+drwxr-xr-x  5 sqyang wheel       5 Nov 13  2009 integration/
+drwxr-xr-x 16 sqyang wheel      22 Nov 13  2009 kernel/
+lrwxrwxrwx  1 sqyang wheel      42 Nov 13  2009 Make.def -> ./config/Make.def.linux2.6-glibc2.3-x86_64*
+-rw-r--r--  1 sqyang wheel   28668 Oct 21  2009 Makefile
+-r-xr-xr-x  1 sqyang wheel    3259 Aug  6  2009 Make.misc*
+drwxr-xr-x  6 sqyang wheel       6 Nov 13  2009 man/
+-rw-r--r--  1 sqyang wheel   13193 Feb 24  2006 README
+drwxr-xr-x  3 sqyang wheel       6 Nov 13  2009 scripts/
+drwxr-xr-x  6 sqyang wheel       7 Nov 13  2009 sdk/
+drwxr-xr-x  3 sqyang wheel       4 Nov 17  2009 tmp/
+ sqyang@bp860-10-70: ln -s ./config/Make.def.linux2.6-glibc2.3-x86_64 ./Make.def
+ sqyang@bp860-10-72: make brel_lsf_sdk
+
+ sqyang@bp860-10-74: pwd
+/scratch/sup5/sqyang/cvs/lsf705/ego/ego_lsf_sdk
+
+ sqyang@bp860-10-77: ls
+base/    config.h*  ego_lsf_sdk/                                 includeNT/    kernel/    Make.misc*  scripts/
+cmd/     CVS/       ego_lsf_sdk.linux2.6-glibc2.3-x86_64.tar.gz  install/      Make.def@  man/        sdk/
+config/  doc/       eservice/                                    integration/  Makefile   README      tmp/
+ sqyang@bp860-10-78: cd base
+ sqyang@bp860-10-79: ls
+base.h*  CVS/  hpc/  intlib/  lib/  lim/  lstools/  Makefile  melim/  ntevent/  pim/
+ sqyang@bp860-10-80: cd lim
+ sqyang@bp860-10-81: ls
+CVS/           lim.common.h   lim.desktop.c  lim.internal.c  lim.passwd.c   lim.slurm.h    lim.virtual.h
+dependlist     lim.conf.c     lim.dist.h     lim.linux.h     lim.policy.c   lim.solaris.h  lim.w2kasm.asm
+flexlm.c       lim.conf.h     lim.dsp        lim.load.c      lim.rload.c    lim.sony.h     lim.w2k.h
+flexlm.h       lim.control.c  lim.event.c*   lim.mac.h*      lim.rms.c      lim.spp.h      lim.w2kia64asm.asm
+lim.aix.h      lim.convex.h   lim.event.h*   lim.main.c      lim.rms.h      lim.sun.h      lim.xdr.c
+lim.alpha.h    lim.cpuid.h    lim.h          lim.misc.c      lim.sco.h      lim.sx.h       Makefile
+lim.audit.c    lim.cpuinfo.h  lim.hpux10.h   lim.nec9.h      lim.scyld.h    lim.ultrix.h   README
+lim.bproc.h    lim.cray.h     lim.hpux.h     lim.nec.h       lim.service.c  lim.uxp.h      simu/
+lim.ccs.h*     lim.crayt3e.h  lim.ia64.h     lim.nt.h        lim.sgi.h      lim.vem.c
+lim.cluster.c  lim.crayxt.h   lim.info.c     limout.h        lim.sim.c      lim.virtual.c
+ sqyang@bp860-10-82:
+ sqyang@bp860-10-82: make lim
+ sqyang@bp860-10-82:
+  sqyang@bp860-10-84: ls
+base/    config.h*  ego_lsf_sdk/                                 includeNT/    kernel/    Make.misc*  scripts/
+cmd/     CVS/       ego_lsf_sdk.linux2.6-glibc2.3-x86_64.tar.gz  install/      Make.def@  man/        sdk/
+config/  doc/       eservice/                                    integration/  Makefile   README      tmp/
+ sqyang@bp860-10-86: ls
+ego/  utopia/
+ sqyang@bp860-10-87: cd utopia/
+ sqyang@bp860-10-89: ln -s ./config/Make.def.linux
+ sqyang@bp860-10-89: ln -s ./config/Make.def.linux2.6-glibc2.3-x86_64 ./Make.def
+ sqyang@bp860-10-89:
+ sqyang@bp860-10-89: ls
+afs/           dceauth/        includeNT/                                  lstcsh/         README.cw    utopia.dsw
+analyzer.new/  diagnosis/      integration/                                Make.def@       README.NQS   vc/
+chkpnt/        eauth/          lfc/                                        Makefile        shlib/       winversion/
+clearcase/     examples/       lsbatch/                                    Make.misc       sim/         xlsadmin/
+config/        fod/            lsf/                                        metascheduler/  soaplib/     xlsf/
+config.h*      glb/            lsf7Update5_linux2.6-glibc2.3-x86_64/       ODBC/           ssched/      xls.msg.10
+core/          hpc/            lsf7Update5_linux2.6-glibc2.3-x86_64.tar.Z  opensrc/        tarmap/      xls.msg.11
+CVS/           html_template/  lslogin/                                    pass/           tmp/
+DB/            htmltool/       lsmake/                                     rdp/            trix/
+dce/           i18n/           lsmake.p/                                   README          utopia_bin/
+ sqyang@bp860-10-90: vi Make.misc
+#EGOPATH=/scratch/support/binwang/LSF8.3code/ego/ego_lsf_sdk/1.2/base
+ sqyang@bp860-10-91:
+ sqyang@bp860-10-91: pwd
+/scratch/sup5/sqyang/cvs/lsf705/utopia
+ sqyang@bp860-10-93: cd lsbatch/daemons/
+ sqyang@bp860-10-94: ls
+admin.h            mbatchd.dsp        mbd.elogd.mt.o      mbd.misc.mt.o          mbd.sim.h         sbd.hsvm.c
+alarmd.c           mbd.admin.c        mbd.event.c         mbd.nqs.c              mbd.sim.misc.c    sbd.hsvm.h
+app.h              mbd.admin.mt.o     mbd.event.mt.o      mbd.nqs.mt.o           mbd.sim.sbd.c     sbd.job.c
+core.patch.c*      mbd.alarm.c        mbd.fair.c          mbd.perfmon.c*         mbd.sla.c         sbd.main.c
+core.patch.c.org*  mbd.alarm.mt.o     mbd.glb.c           mbd.perfmon.h*         mbd.sla.mt.o      sbd.misc.c
+core.patch.h*      mbd.app.c          mbd.glb.mt.o        mbd.perfmon.mt.o       mbd.storage.c     sbd.policy.c
+core.patch.mt.o    mbd.app.mt.o       mbd.grp.c           mbd.policy.c           mbd.sym_ua.c      sbd.resize.c
+core.sched.c       mbd.arm4.c*        mbd.grp.mt.o        mbd.policy.c.obsolete  mbd.sym_ua.mt.o   sbd.resize.h
+core.sched.h       mbd.arm4.mt.o      mbd.h               mbd.profcnt.def        mbd.vem.c         sbd.serv.c
+core.sched.mt.o    mbd.calendar.c     mbd.host.c          mbd.proxy.c            mbd.vem.mt.o      sbd.service.c
+CVS/               mbd.calendar.mt.o  mbd.host.mt.o       mbd.proxy.mt.o         mbd.vemuser.c*    sbd.sig.c
+daemonout.h        mbd.cil.c          mbd.init.c          mbd.queue.c            mbd.vemuser.mt.o  sbd.sschild.c
+daemons.c          mbd.cil.mt.o       mbd.init.mt.o       mbd.queue.mt.o         mbd.window.c      sbd.sschild.h
+daemons.h          mbd.cluster.c      mbd.jarray.c        mbd.requeue.c          mbd.window.mt.o   sbd.timeoutpid.c
+daemons.mt.o       mbd.cluster.mt.o   mbd.jarray.mt.o     mbd.requeue.mt.o       mbd.wlm.c         sbd.virtual.c
+daemons.xdr.c      mbd.comm.c         mbd.jgrp.c          mbd.resize.c           mbd.wlm.mt.o      sbd.virtual.h
+daemons.xdr.mt.o   mbd.comm.mt.o      mbd.jgrp.mt.o       mbd.resize.mt.o        misc.c            sbd.xdr.c
+dependlist         mbd.cu.c           mbd.jobbroker.c*    mbd.resource.c         misc.mt.o         simulate.h
+elock.c            mbd.cu.h           mbd.jobbroker.mt.o  mbd.resource.mt.o      proxy.h           sla.h
+elock.mt.o         mbd.cu.mt.o        mbd.job.c           mbd.resreq.c           raisealarm.c      Task.c
+elogd.c            mbd.db.c           mbd.job.mt.o        mbd.resreq.mt.o        rft.c             Task.h
+jgrp.h             mbd.db.mt.o        mbd.log.c           mbd.rsv.policy.c       sbatchd.dsp       TimeQueue.c
+mail.c             mbd.dep.c          mbd.log.mt.o        mbd.rsv.policy.mt.o    sbd.arm4.c*       TimeQueue.h
+mail.mt.o          mbd.dep.mt.o       mbd.main.c          mbd.serv.c             sbd.comm.c        vem.h
+Makefile           mbd.dlog.c         mbd.main.c.ori      mbd.serv.mt.o          sbd.file.c        VirtualProcess.c
+Makefile.sim       mbd.dlog.mt.o      mbd.main.mt.o       mbd.sim.c              sbd.h             VirtualProcess.h
+mbatchd*           mbd.elogd.c        mbd.misc.c          mbd.sim.comm.c         sbd.hpc.c
+ sqyang@bp860-10-95: make mbatchd
+
+
+/proc/sys/kernel/perf_event_paranoid
+[binwang@bjit003 /sbin]$ cd /etc
+[binwang@bjit003 /etc]$ sudo vi sysctl.conf
+cd /sbin
+sudo ./sysctl -p
