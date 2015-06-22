@@ -389,7 +389,7 @@ tbody tr:nth-child(even) {
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
 }
-#LSFBody img{
+#LSFBody img {
     margin-bottom: 10px;
     border: 1px solid lightblue;
 }
@@ -405,7 +405,7 @@ tbody tr:nth-child(even) {
     position: relative;
     overflow: hidden;
 }
-#daemon{
+#daemon {
     margin: 10px 0;
     font-family: 'ColaborateLightRegular', Arial, sans-serif;
     color: black;
@@ -424,7 +424,7 @@ tbody tr:nth-child(even) {
     position: relative;
     overflow: hidden;
 }
-#daemon li{
+#daemon li {
     margin: 5px 0;
 }
 #resources {
@@ -453,7 +453,7 @@ tbody tr:nth-child(even) {
     color: rgb(119, 104, 71);
     line-height: 100%;
 }
-#workflow{
+#workflow {
     margin: 10px 0;
     font-family: 'ColaborateLightRegular', Arial, sans-serif;
     color: black;
@@ -467,11 +467,10 @@ tbody tr:nth-child(even) {
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
 }
-#workflow li{
+#workflow li {
     margin: 5px 0;
 }
-
-#gdbdebug{
+#gdbdebug {
     margin: 10px 0;
     font-family: 'ColaborateLightRegular', Arial, sans-serif;
     color: black;
@@ -486,8 +485,8 @@ tbody tr:nth-child(even) {
     transition: all .25s ease-in;
 }
 
-<!--
-.slidePanel a {
+
+<!-- .slidePanel a {
     text-decoration: none;
     padding: 20px;
     display: inline-block;

@@ -28,6 +28,30 @@
                 </div>
             </div>
 
+            <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#home">Project name</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#home">Home</a>
+                        </li>
+                        <li><a href="#recipe">A Recipe</a>
+                        </li>
+                        <li><a href="#about">About</a>
+                        </li>
+                        <li><a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div id="LSFBody">
                 <div id="resources">
                     <p class="open">+</p>
@@ -80,7 +104,7 @@
                     <ol>
                         <li><strong>Job Submission (<a href="images/LSF5.jpg" target="_blank">chart</a>) - </strong>User may submit one or multiple jobs on any host in the cluster via bsub command(windows: bsub.exe), mbatchd which running on master host is forever ready to accept new job from any host.</li>
                         <img src="images/LSF7.jpg" alt="job submission" width="500" height="200" />
-                        <li><strong>Enqueue new jobs - </strong>Mbatchd daemon would enqueue the new submitted jobs. It maintains a job linked list in memory. Each linked node is a job card which contains the detailed job information. Mbatchd daemon reads this linked list  and dispatches a batch of jobs to idle hosts in cluster periodically.</li>
+                        <li><strong>Enqueue new jobs - </strong>Mbatchd daemon would enqueue the new submitted jobs. It maintains a job linked list in memory. Each linked node is a job card which contains the detailed job information. Mbatchd daemon reads this linked list and dispatches a batch of jobs to idle hosts in cluster periodically.</li>
                         <li><strong>Make Scheduling Decision (<a href="images/LSF4.jpg" target="_blank">chart</a>) - </strong>Synchronize jobs maintained in mbatchd job queue to mbschd job queue periodically. Mbschd is repsonsible to make decision which hosts these jobs may run on according to some customized policies.</li>
                         <li><strong>Job Distribution - </strong>Mbschd synchronizes job scheduling decision to mbatchd periodically. Mbatchd distributes these jobs to hosts to run according to scheduling decision.</li>
                         <li><strong>Run Job (<a href="images/LSF6.jpg" target="_blank">chart</a>) - </strong>Mbatchd distributes a job to one or multiple hosts to run. Sbatchd on hosts accepts the job and run it.</li>

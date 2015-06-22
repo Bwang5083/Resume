@@ -4,6 +4,7 @@
 <head>
     <title>Resume</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
     <script>
         $('#slider').anythingSlider({
             buildArrows: false,
@@ -15,9 +16,35 @@
 </head>
 
 <body>
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#hobby">Project name</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#home">Home</a>
+                </li>
+                <li><a href="#recipe">A Recipe</a>
+                </li>
+                <li><a href="#about">About</a>
+                </li>
+                <li><a href="#hobby">hobby</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <div class="scrollable">
         <div class="scrollable-content">
             <div class="list-group text-center">
+                <br>
+                <br>
                 <div class="list-group-item list-group-item-home">
                     <div id="photo">
                         <img src="images/photo2.JPG" alt="photo" height="200" width="220">
@@ -112,7 +139,7 @@
                     </div>
                 </div>
                 <div class="list-group-item">
-                    <div id="hobby">
+                    <div class="bookmark" id="hobby">
                         <h2>Activities and Interests</h2>
                         <ul>
                             <li>Interested mountain climbing, hiking etc</li>
@@ -135,6 +162,7 @@
             </div>
         </div>
     </div>
+    <script data-main="js/app" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
 </body>
 
 </html>
