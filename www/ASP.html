@@ -15,7 +15,7 @@
                         <div class="panel-body">
                             <div id="BusserviceHeader">
                                 <div id="DevelopEnv">
-                                    <h4>Basic Information: </h4>
+                                    <button type="submit" id="submit" name="Send" class="button lightorange" style="margin:0 0 10px 0;"><div class="shine"></div>Farm Website</button>
                                     <h5><strong>Platform:</strong> Windows Operation System</h5>
                                     <h5><strong>Language:</strong> ASP.net, MVC, SQL, HTML, CSS</h5>
                                     <h5><strong>Development Tool:</strong> Visual Studio 2013</h5>
@@ -99,20 +99,21 @@
                         <div class="panel-body">
                             <div id="BusserviceHeader">
                                 <div id="DevelopEnv">
-                                    <h4>Basic Information: </h4>
+                                    <a href="https://www.google.ca/" target="_blank"><button type="submit" class="button lightorange" style="margin:0 0 10px 0;"><div class="shine"></div>Bus Service System</button></a>
                                     <h5><strong>Platform:</strong> Windows Operation System</h5>
-                                    <h5><strong>Language:</strong> ASP.net, MVC, SQL, HTML, CSS</h5>
+                                    <h5><strong>Language:</strong> ASP.net, MVC, SQL, HTML, CSS, javascript, jQuery, Ajax</h5>
                                     <h5><strong>Development Tool:</strong> Visual Studio 2013</h5>
                                     <h5><strong>Database:</strong> SQL Server 2012</h5>
                                     <h5><strong>Functions:</strong> </h5>
                                     <ol>
+                                        <li>Slider and poster layout</li>
                                         <li>Bus routes management</li>
-                                        <li>Bus stop management</li>
-                                        <li>Schedule bus trip</li>
+                                        <li>Bus stops management</li>
+                                        <li>Bus trip scheduling</li>
                                         <li>Route scheduling for a specific bus stop</li>
                                         <li>Role management</li>
                                         <li>User management</li>
-                                        <li>Localization</li>
+                                        <li>Localization(English, French, Chinese)</li>
                                     </ol>
                                 </div>
                                 <div id="MapAudio">
@@ -120,15 +121,15 @@
                                 </div>
                                 <div id="BusserviceHpage">
                                     <a href="images/ASP.mp4" target="_blank">
-                                        <video src="images/ASP.mp4" type='video/mp4' height="300" poster="images/BusserviceHpage.jpg" controls autoplay loop/>
+                                        <video src="images/ASP.mp4" type='video/mp4' height="335" poster="images/BusserviceHpage.jpg" controls autoplay loop/>
                                     </a>
                                 </div>
                             </div>
                             <div id="BusserviceSection">
-                                <h4>Functionalities: </h4>
+                                <h4>Features: </h4>
                                 <div class="Function">
                                     <div class="BusserviceFunction">
-                                        <h5>1. Bus routes management</h5>
+                                        <h5>1. Slider & Poster on home page</h5>
                                         <ul>
                                             <li>Create a new bus route</li>
                                             <li>Delete a bus route</li>
@@ -141,6 +142,27 @@
                                         </ul>
                                     </div>
                                     <div class="FunctionPage">
+                                        <a href="images/BusserviceHpage.jpg" target="_blank">
+                                            <img src="images/BusserviceHpage.jpg" alt="posters in home page" height="160px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>1. Bus routes management</h5>
+                                        <ul>
+                                            <li>Create\Delete\Browse\Edit a bus route</li>
+                                            <li>Order bus route list by route name or route code</li>
+                                            <li>List all bus stops of a selected bus route</li>
+                                            <li>Schedule bus trips</li>
+                                            <a href="images/TripScheduling1.jpg" target="_blank">List all bus trips of a selected bus route.</a>
+                                            <br>
+                                            <text>Order bus trip list by trip date, start time, driver, bus # etc.</text>
+                                            <br>
+                                            <a href="images/TripScheduling2.jpg" target="_blank">Create a new bus trip</a>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
                                         <a href="images/RouteManagement.jpg" target="_blank">
                                             <img src="images/RouteManagement.jpg" alt="route management" height="160px" />
                                         </a>
@@ -150,11 +172,11 @@
                                     <div class="BusserviceFunction">
                                         <h5>2. Bus stops management</h5>
                                         <ul>
-                                            <li>Create a new bus stop</li>
-                                            <li>Delete a bus stop</li>
-                                            <li>Update a bus stop information</li>
-                                            <li>Sort bus stop by number, location or hash</li>
-                                            <li>Check route scheduling</li>
+                                            <li>Create\Delete\Browse\Edit a bus stop</li>
+                                            <li>Automatic page separation</li>
+                                            <li>Search bus stop by bus stop number or location</li>
+                                            <li>Sort bus stop by stop number, location or hash</li>
+                                            <li>Check route scheduling of a selected bus stop</li>
                                             <a href="images/RouteScheduling.jpg" target="_blank">Check which routes pass this bus stop</a>
                                             <br>
                                             <a href="images/RouteScheduling1.jpg" target="_blank">Check a route scheduling</a>
@@ -168,9 +190,9 @@
                                 </div>
                                 <div class="Function">
                                     <div class="BusserviceFunction">
-                                        <h5>3. Schedule a bus trip</h5>
+                                        <h5>3. Bus trip scheduling</h5>
                                         <ul>
-                                            <li>Outline all bus trips</li>
+                                            <li>List all bus trips</li>
                                             <a href="images/TripScheduling1.jpg" target="_blank">Bus trips</a>
                                             <li>Create a new bus trip</li>
                                             <a href="images/TripScheduling2.jpg" target="_blank">Create a new bus trip</a>
@@ -207,7 +229,7 @@
                                         <ul>
                                             <li>Create a new role</li>
                                             <li>Delete an existing role</li>
-                                            <li>Outline users in a role</li>
+                                            <li>List users in a selected role</li>
                                             <li>Add a user to one role or multiple roles</li>
                                             <li>Remove a user from a role</li>
                                             <a href="images/Rolemanagement1.jpg" target="_blank">Users in a role</a>
@@ -226,7 +248,6 @@
                                             <li>Lock or unlock a user from using the system</li>
                                             <li>Reset a user's password</li>
                                             <li>Delete an existing user</li>
-                                            <li>Sort bus stop by number, location or hash</li>
                                             <li>Create a new user in registration module</li>
                                         </ul>
                                     </div>
@@ -242,9 +263,9 @@
                                         <ul>
                                             <li>Localizing the website to English, French or Chinese</li>
                                             <li>Language selection page</li>
-                                            <a href="images/Localization.jpg" target="_blank">Check a route scheduling</a>
                                             <li>Return to prior page and localize</li>
-                                            <a href="images/Localization1.jpg" target="_blank">Check a route scheduling</a>
+                                            <a href="images/StopManagement.jpg" target="_blank">Bus Stop Management(English)</a>
+                                            <a href="images/Localization.jpg" target="_blank">Bus Stop Management(Chinese)</a>
                                         </ul>
                                     </div>
                                     <div class="FunctionPage">
