@@ -4,11 +4,42 @@
 <head>
     <title>Resume</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="images/resume.jpg" />
-    <link rel="stylesheet" href="css/home.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script>
+        $('#slider').anythingSlider({
+            buildArrows: false,
+            autoPlay: false,
+            buildStartStop: false,
+            resizeContents: false
+        });
+    </script>
 </head>
 
 <body>
+    <!--div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#hobby">Project name</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#home">Home</a>
+                </li>
+                <li><a href="#recipe">A Recipe</a>
+                </li>
+                <li><a href="#about">About</a>
+                </li>
+                <li><a href="#/home/hobby">hobby</a>
+                </li>
+            </ul>
+        </div>
+    </div-->
+
     <div class="scrollable">
         <div class="scrollable-content">
             <div class="list-group text-center">
@@ -18,14 +49,14 @@
                     </div>
                     <div id="contact">
                         <h1>Jason Wang</h1>
-                        <h3>15 Amherst Drive, Kitchener ON, N2P 1C9</h3>
+                        <h3>150 Garafraxa ST West, Fergus ON, N1M 1C9</h3>
                         <h3>(226)8682433 ~ Bwang5083@conestogac.on.ca</h3>
                     </div>
                 </div>
                 <div class="list-group-item">
                     <div id="objective">
                         <h2>Objective</h2>
-                        <p>To put my former working experience and current computer application development studies into practice while contributing to the organization's success as a co-op student at your company . I am available for full-time position after co-op semester.</p>
+                        <p>I have twelve years experience of analyzing business, designing and developing medium-sized software system. Now I am looking for a full-time job to apply both my creative problem solving skill and software development skill in your company.</p>
                     </div>
                 </div>
                 <div class="list-group-item">
@@ -46,7 +77,9 @@
                     <div id="portfolios">
                         <h2>Portfolios</h2>
                         <ul>
-                            <a href="http://bwang5083.github.io/Resume/www" target="_blank"><li>Electronic Resume</li></a>
+                            <a href="http://bwang5083.github.io/Resume/www" target="_blank">
+                                <li>Electronic Resume</li>
+                            </a>
                         </ul>
                     </div>
                 </div>
@@ -54,15 +87,25 @@
                     <div id="education">
                         <h2>Education</h2>
                         <ul>
-                            <li>2014 - present<br>Computer Application Development Program, one-year certificate, Conestoga College, Kitchener, ON</li>
+                            <li>2014 - present
+                                <br>Computer Application Development Program, one-year certificate, Conestoga College, Kitchener, ON</li>
                             <br>
-                            <li>1998 - 2002<br>Computer Science, bachelor degree, Nanjing University of Science & Technology, Nanjing, China</li>
+                            <li>1998 - 2002
+                                <br>Computer Science, bachelor degree, Nanjing University of Science & Technology, Nanjing, China</li>
                         </ul>
                     </div>
                 </div>
                 <div class="list-group-item">
                     <div id="WorkHistory">
                         <h2>Work History</h2>
+                        <br>
+                        <h4><strong>2015 - Now</strong></h4>
+                        <h4><strong>Coop Student, A.O.Smith, Canada</strong></h4>
+                        <ul>
+                            <li>Independently developed four websites which have been using by internal employees and customers. Those projects win me lots of compliments from both employees and customers.</li>
+                            <li>Handle some hardware or network relevant issues like trouble shooting issues about printer, photocopier, laptop, desktop, router, switch etc.</li>
+                            <li>Install operation system and other application softwares on new computers. Add new computer to A.O.Smith domain, install network printers, get windows' latest updates etc.</li>
+                        </ul>
                         <br>
                         <h4><strong>2014</strong></h4>
                         <h4><strong>Technical Project Manager, Pearson, China</strong></h4>
@@ -102,7 +145,7 @@
                     </div>
                 </div>
                 <div class="list-group-item">
-                    <div id="hobby">
+                    <div class="page" id="hobby">
                         <h2>Activities and Interests</h2>
                         <ul>
                             <li>Interested mountain climbing, hiking etc</li>
@@ -110,11 +153,22 @@
                             <li>Enjoy opportunities to expand my circle of friends</li>
                             <li>Go to church every Sunday morning to join weekend worship</li>
                         </ul>
+                        <!--
+                        <div id="slider">
+                            <div class="slidePanel"><a href="page1.html"><h2>The Amazing Pumpkin</h2><img src="images/3lyrs2.jpg" alt="Pumpkin" width="215" height="119" class="imgLeft"></a>
+                            </div>
+                            <div class="slidePanel"><a href="page2.html"><h2>The Amazing Grape</h2><img src="images/3lyrs2.jpg" alt="Grapes" width="213" height="118" class="imgLeft"></a>
+                            </div>
+                            <div class="slidePanel"><a href="page3.html"><h2>The Amazing Assorted Vegetables</h2><img src="images/3lyrs2.jpg" alt="Various" width="210" height="117" class="imgLeft"></a>
+                            </div>
+                        </div>
+                        -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script data-main="js/app" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
 </body>
 
 </html>

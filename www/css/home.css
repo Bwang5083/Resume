@@ -87,30 +87,29 @@
     border-radius: 5px;
     margin: 10px 12px;
     padding: 10px 12px;
-    height: 335px;
+    overflow: hidden;
     -moz-box-shadow: 0 0 3px 3px;
     -webkit-box-shadow: 0 0 3px 3px;
     box-shadow: 0 0 3px 3px;
 }
 #DevelopEnv {
     float: left;
-    <!--width: 300px;
-    --> position: relative;
-    width: 40%;
+    width: 35%;
 }
 #BusserviceHpage {
     float: left;
     border: 1px solid black;
     position: relative;
-    max-width: 60%;
+    max-width: 65%;
     overflow: hidden;
+    margin-top: 6px;
 }
 #BusserviceSection {
     border: 3px double #8B0000;
     border-radius: 5px;
     margin: 10px 12px;
     padding: 10px 12px;
-    height: 1300px;
+    overflow: hidden;
     -moz-box-shadow: 0 0 3px 3px;
     -webkit-box-shadow: 0 0 3px 3px;
     box-shadow: 0 0 3px 3px;
@@ -197,12 +196,10 @@
 #oracleFunction {
     margin: 15px 10px;
 }
-
 #oracleFunction h5 {
     font-weight: bold;
 }
-
-#WCFBasicInfo{
+#WCFBasicInfo {
     margin: 0 15px;
     height: 465px;
     font-family: 'ColaborateLightRegular', Arial, sans-serif;
@@ -217,7 +214,6 @@
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
 }
-
 #MapChinaVideo {
     margin: 15px;
 }
@@ -302,13 +298,11 @@ tbody tr:nth-child(even) {
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
 }
-
-#XMLBasicInfo article{
+#XMLBasicInfo article {
     float: left;
     width: 52%;
 }
-
-#XMLBasicInfo aside{
+#XMLBasicInfo aside {
     float: left;
     width: 45%;
     border: 2px solid darkcyan;
@@ -317,12 +311,10 @@ tbody tr:nth-child(even) {
     color: darkcyan;
     background-color: beige;
 }
-
-#XMLBasicInfo aside img{
+#XMLBasicInfo aside img {
     float: right;
     margin-left: 3px;
 }
-
 #XMLTable {
     clear: both;
     margin: 20px 20px;
@@ -350,12 +342,10 @@ tbody tr:nth-child(even) {
 #XianFunction li {
     margin: 15px 0;
 }
-
-#XianBasicInfo article{
+#XianBasicInfo article {
     float: left;
     width: 52%;
 }
-
 #XianBasicInfo aside {
     float: left;
     width: 45%;
@@ -364,9 +354,265 @@ tbody tr:nth-child(even) {
     padding: 1em;
     color: darkcyan;
 }
-
-#XianBasicInfo aside img{
+#XianBasicInfo aside img {
     float: left;
     margin-right: 8px;
     border: 1px solid black;
 }
+#LSFHeader {
+    margin: 0 15px;
+    height: 365px;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(105, 105, 105, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+#LSFBody {
+    margin: 8px 15px;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(105, 105, 105, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+#LSFBody img {
+    margin-bottom: 10px;
+    border: 1px solid lightblue;
+}
+#LSFBasicInfo {
+    float: left;
+    width: 40%;
+}
+#LSFInfraPic {
+    float: left;
+    width: 58%;
+    margin-left: 8px;
+    border: 1px solid lightgrey;
+    position: relative;
+    overflow: hidden;
+}
+#daemon {
+    margin: 10px 0;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(255, 0, 0, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+#daemon img {
+    border: 1px solid lightgrey;
+    position: relative;
+    overflow: hidden;
+
+}
+#daemon li {
+    margin: 5px 0;
+}
+#resources {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0em 1em 1em .75em;
+    position: absolute;
+    top: 10em;
+    left: -51em;
+    width: 50em;
+    -moz-border-radius: 0 0 .5em 0;
+    border-radius: 0 0 .5em 0;
+    display: none;
+}
+#resources .open {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    top: -20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    -moz-border-radius: 0.5em;
+    border-radius: .5em 0;
+    text-align: center;
+    font-family: 'ColaborateBoldRegular', Arial, sans-serif;
+    cursor: pointer;
+    color: rgb(119, 104, 71);
+    line-height: 100%;
+}
+#workflow {
+    margin: 10px 0;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(255, 0, 0, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+#workflow li {
+    margin: 5px 0;
+}
+#gdbdebug {
+    margin: 10px 0;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.75em;
+    padding: 1.5em 1.5em;
+    background-color: rgba(255, 0, 0, 0.15);
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 36px;
+    margin: 40px 5px 5px 0px;
+    cursor: pointer;
+    opacity: 0.9;
+
+    color: #FFF;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-shadow: rgba(0,0,0,0.9) 0px 1px 2px;
+
+    background: #434343;
+    border: 1px solid #242424;
+
+    -webkit-border-radius: 4px;
+     -khtml-border-radius: 4px;
+       -moz-border-radius: 4px;
+         -o-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+     -khtml-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+       -moz-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+         -o-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+            box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    -webkit-transition: all 0.1s linear;
+     -khtml-transition: all 0.1s linear;
+       -moz-transition: all 0.1s linear;
+         -o-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+}
+.button:hover {
+    color: aqua;
+    -webkit-box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+     -khtml-box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+       -moz-box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+         -o-box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+            box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+}
+.button:active {
+    -webkit-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px,inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+     -khtml-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px,inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+       -moz-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+         -o-box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+            box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0) 0px 1px 0px, inset rgba(0,0,0,0.5) 0px 0px 5px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+}
+.shine {
+    display: block;
+    position: relative;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+    background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+    padding: 0px 12px;
+    top: -12px;
+    left: -24px;
+    height: 1px;
+    -webkit-box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+     -khtml-box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+       -moz-box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+         -o-box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+            box-shadow: rgba(255,255,255,0.2) 0px 1px 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+     -khtml-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+.button:hover .shine {left: 24px;}
+.button:active .shine {opacity: 0;}
+
+.button.gray {background: #555;}
+.button.blue {background: #3a617e;}
+.button.green {background: #477343;}
+.button.red {background: #723131;}
+.button.purple {background: #4b3f5e;}
+.button.orange {background: #624529;}
+.button.lightorange {background: #FF7F00;}
+.button.brown {background: #A0522D;}
+.button.darkbrown {background: #8B0000;}
+.button.greencyan {background: #66CDAA;}
+.button.darkcyan {background: #388E8E;}
+.button.skyblue {background: #00E5EE;}
+
+<!-- .slidePanel a {
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    background-color: white;
+    border: solid red 10px;
+}
+.slidePanel p {
+    margin-right: 60px;
+    color: black !important;
+}
+div.anythingSlider .anythingWindow {
+    /* remove borders above and below slider */
+    border: none;
+}
+div.anythingSlider .anythingControls {
+    /* reposition controls to top right */
+    position: absolute;
+    right: 55px;
+    top: 15px;
+}
+div.anythingSlider .anythingControls ul a {
+    background: none;
+    /* remove drop shadow	*/
+    border-radius: 0;
+    /*remove rounded corners */
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+div.anythingSlider.activeSlider .anythingControls ul a {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+div.anythingSlider.activeSlider .anythingControls ul a.cur {
+    background-color: red;
+    color: black;
+    border: 1px solid black;
+}
+div.anythingSlider.activeSlider .anythingControls ul a:hover {
+    background-color: white;
+    color: black;
+}
+-->
