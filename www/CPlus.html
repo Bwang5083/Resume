@@ -23,17 +23,8 @@
             </ul>
 
             <div ui-if="activeTab == 1">
-                <div id="MapAudio">
-                    <audio src="" type='audio/mp3' autoplay />
-                </div>
-                <div id="MapChinaVideo">
-                    <a href="images/MapChina.mp4" target="_blank">
-                        <video src="images/MapChina.mp4" type='video/mp4' height="465" poster="images/MapChina.jpg" controls autoplay loop/>
-                    </a>
-                </div>
-
                 <div id="MapChinaBasicInfo">
-                    <article>
+                    <div id="DevelopEnv">
                         <h4>Basic Information: </h4>
                         <h5><strong>Project Name:</strong> MapChina 2007</h5>
                         <h5><strong>Platform:</strong> Windows Operation System</h5>
@@ -42,6 +33,7 @@
                         <h5><strong>Database:</strong> sqlite</h5>
                         <h5><strong>Functions:</strong> </h5>
                         <ol>
+                            <li>Main User Interface(<a></a>)</li>
                             <li>Public Transport Searching</li>
                             <li>Driving Navigation</li>
                             <li>Train Time Table</li>
@@ -51,10 +43,15 @@
                             <li>Roadmap</li>
                             <li>Interface with portable device</li>
                         </ol>
-                    </article>
-                    <a href="images/MapChina.jpg" target="_blank">
-                        <img src="images/MapChina.jpg" alt="mapchina pic" />
-                    </a>
+                    </div>
+                    <div id="MapAudio">
+                        <audio src="" type='audio/mp3' autoplay />
+                    </div>
+                    <div id="BusserviceHpage">
+                        <a href="images/MapChina.mp4" target="_blank">
+                            <video src="images/MapChina.mp4" type='video/mp4' height="335" poster="images/MapChina.jpg" controls autoplay loop/>
+                        </a>
+                    </div>
                 </div>
 
                 <div id="MapChinaArchitecture">
