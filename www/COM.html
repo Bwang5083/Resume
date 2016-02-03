@@ -1,38 +1,92 @@
 <div ui-content-for="title">
-  <span>COM & DCOM</span>
+    <span>COM & DCOM</span>
 </div>
 
 <div class="scrollable">
-  <div class="scrollable-content">
-    <div class="section">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="btn-group pull-right">
-            <a ui-turn-on='myDropdown' class='btn'>
-              <i class="fa fa-ellipsis-v"></i>
-            </a>
-            <ul
-              class="dropdown-menu"
-              ui-outer-click="Ui.turnOff('myDropdown')"
-              ui-outer-click-if="Ui.active('myDropdown')"
-              role="menu"
-              ui-show="myDropdown"
-              ui-state="myDropdown"
-              ui-turn-off="myDropdown">
+    <div class="scrollable-content">
+        <div class="section">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="btn-group pull-right">
+                        <a ui-turn-on='myDropdown' class='btn'>
+                            <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                        <ul class="dropdown-menu" ui-outer-click="Ui.turnOff('myDropdown')" ui-outer-click-if="Ui.active('myDropdown')" role="menu" ui-show="myDropdown" ui-state="myDropdown" ui-turn-off="myDropdown">
 
-              <li><a>Action</a></li>
-              <li><a>Another action</a></li>
-              <li><a>Something else here</a></li>
-              <li class="divider"></li>
-              <li><a>Separated link</a></li>
-            </ul>
-          </div>
-          <h3 class="panel-title">Note</h3>
+                            <li><a>Action</a>
+                            </li>
+                            <li><a>Another action</a>
+                            </li>
+                            <li><a>Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a>Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3 class="panel-title">Baidu Statistics System(offline version)</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="BusserviceHeader">
+                        <div id="DevelopEnv">
+                            <h4><strong>System Description</strong></h4>
+                            <h5><strong>Platform:</strong> Windows Operation System</h5>
+                            <h5><strong>Language:</strong> C++, MFC, COM, DCOM</h5>
+                            <h5><strong>Development Tool:</strong> Visual Studio 2010</h5>
+                            <h5><strong>Database:</strong> SQL Server 2012</h5>
+                            <h5><strong>Middleware:</strong> Microsoft Office Word API(msword.h, msword.cpp)</h5>
+                            <h5><strong>Functions:</strong> </h5>
+                            <ol>
+                                <li>Search and display a specific period of baidu statistics data</li>
+                                <li>Search and display a specific period of baidu net alliance promotion data</li>
+                                <li>Search and display a specific period of baidu searching promotion data</li>
+                                <li>Generate a table and a graph based on the statistics data in word document</li>
+                            </ol>
+                        </div>
+                        <div id="MapAudio">
+                            <audio src="" type='audio/mp3' autoplay />
+                        </div>
+                        <div id="BusserviceHpage">
+                            <a href="images/DCOM.mp4" target="_blank">
+                                <video src="images/DCOM.mp4" type='video/mp4' height="335" poster="images/DCOMPoster.jpg" controls autoplay loop/>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="DCOMArchitecture">
+                        <img src="images/DCOMArchitecture.jpg" alt="DCOM Architecture" />
+                        <div id="DCOMArchitectureContent">
+                            <h4><strong style="border-bottom:1px solid black;">Server Application:</strong></h4>
+                            <h5><strong>DcomPro.exe -</strong> Publish interfaces which will be invoked in client application. These interfaces are developed to read baidu statistics data from SQL Server database on server side.</h5>
+                            <h5><strong>DcomProPS.dll -</strong> The Proxy Stub dll is generated automatically when creating DCOM server application. If the server application and client application are deployed on different computers, this dll has to be registered first. Then client application can invoke the interfaces defined in server application directly.</h5>
+                            <h4><strong style="border-bottom:1px solid black;">Client Application:</strong></h4>
+                            <h5><strong>StatisticAgent.exe -</strong> Develop user interface, algorithm, logical controls in client application. Call interfaces defined in ClientDll.dll to communicate with server application to get data from database on server side.</h5>
+                            <h5><strong>ClientDll.dll -</strong> Include some interfaces which encapsulate server application interfaces' calling. Interfaces in ClientDll.dll will be called in client application.</h5>
+                            <h5><strong>DcomProPS.dll -</strong> Proxy Stub dll which must be registered on both server side and client side prior to start communicating.</h5>
+                        </div>
+                    </div>
+                    <div id="DCOMFunctions">
+                        <div class="BaiduStaFunctions">
+                            <h5><strong>1. Baidu Network Alliance Promotion</strong></h5>
+                            <ul>
+                                <li>Search the data of a selected account within a specific period</li>
+                                <li>Write the data into a word document(<a href="images/baiduSearch.doc" target="_blank">Sample Report</a>)</li>
+                                <li>Generate a line chart for these specific period of data</li>
+                            </ul>
+                        </div>
+                        <a href="images/netAlliance.jpg" target="_blank"><img src="images/netAlliance.jpg" height="215" alt="Baidu Statistics" /></a>
+                        <br><br>
+                        <div class="BaiduStaFunctions">
+                            <h5><strong>2. Baidu Search Promotion</strong></h5>
+                            <ul>
+                                <li>Search the data of a selected account within a specific period</li>
+                                <li>Write the data into a word document(<a href="images/baiduSearch.doc" target="_blank">Sample Report</a>)</li>
+                                <li>Generate a line chart for these specific period of data</li>
+                            </ul>
+                        </div>
+                        <a href="images/baiduSearch.jpg" target="_blank"><img src="images/baiduSearch.jpg" height="215" alt="Baidu Statistics" /></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="panel-body">
-           {{lorem}}
-        </div>
-      </div>
     </div>
-  </div>
 </div>
