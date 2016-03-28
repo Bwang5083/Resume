@@ -42,6 +42,10 @@ app.config(function ($routeProvider) {
         templateUrl: 'ASP.html',
         reloadOnSearch: false
     });
+    $routeProvider.when('/PHP', {
+        templateUrl: 'PHP.html',
+        reloadOnSearch: false
+    });
     $routeProvider.when('/CSharp', {
         templateUrl: 'CSharp.html',
         reloadOnSearch: false

@@ -5,7 +5,7 @@
 <div class="scrollable">
     <div class="scrollable-content">
         <div class="section">
-            <div class="panel-group" ui-state='myAccordion' ui-default='2'>
+            <div class="panel-group" ui-state='myAccordion' ui-default='3'>
                 <div class="panel panel-default">
                     <div class="panel-heading" ui-set="{'myAccordion': 1}">
                         <h4 class="panel-title">Dean's Honour</h4>
@@ -24,6 +24,17 @@
                     <div ui-if="myAccordion == 2" ui-scope-context='2'>
                         <a href="images/grade.pdf" target="_blank">
                             <img src="images/grade.jpg" alt="conestoga transcript" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" ui-set="{'myAccordion': 3}">
+                        <h4 class="panel-title">Certificate</h4>
+                    </div>
+                    <div ui-if="myAccordion == 3" ui-scope-context='3'>
+                        <a href="images/CCCertificate.jpg" target="_blank">
+                            <img src="images/CCCertificate.jpg" alt="Conestoga Certificate" />
                         </a>
                     </div>
                 </div>
