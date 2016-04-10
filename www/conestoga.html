@@ -5,14 +5,14 @@
 <div class="scrollable">
     <div class="scrollable-content">
         <div class="section">
-            <div class="panel-group" ui-state='myAccordion' ui-default='3'>
+            <div id="accordion" class="panel-group" ui-state='myAccordion' ui-default='3'>
                 <div class="panel panel-default">
                     <div class="panel-heading" ui-set="{'myAccordion': 1}">
                         <h4 class="panel-title">Dean's Honour</h4>
                     </div>
                     <div ui-if="myAccordion == 1" ui-scope-context='1'>
-                        <a href="images/deanHonour.jpg" target="_blank">
-                            <img src="images/deanHonour.jpg" alt="dean's honour" />
+                        <a href="images/deanHonour.pdf" target="_blank">
+                            <img src="images/deanHonour.jpg" alt="conestoga transcript" />
                         </a>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <h4 class="panel-title">Certificate</h4>
                     </div>
                     <div ui-if="myAccordion == 3" ui-scope-context='3'>
-                        <a href="images/CCCertificate.jpg" target="_blank">
+                        <a href="images/CCCertificate.pdf" target="_blank">
                             <img src="images/CCCertificate.jpg" alt="Conestoga Certificate" />
                         </a>
                     </div>
@@ -41,5 +41,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>
