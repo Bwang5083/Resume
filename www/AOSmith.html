@@ -1,0 +1,149 @@
+<div ui-content-for="title">
+    <span>A. O. Smith Canada</span>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class='section'>
+            <ui-state id='activeTab' default='1'></ui-state>
+
+            <ul class="nav nav-tabs">
+                <li ui-class="{'active': activeTab == 1}">
+                    <a ui-set="{'activeTab': 1}">Reference Letter</a>
+                </li>
+                <li ui-class="{'active': activeTab == 2}">
+                    <a ui-set="{'activeTab': 2}">Contract</a>
+                </li>
+                <li ui-class="{'active': activeTab == 3}">
+                    <a ui-set="{'activeTab': 3}">Certificate</a>
+                </li>
+                <li ui-class="{'active': activeTab == 4}">
+                    <a ui-set="{'activeTab': 4}">Projects</a>
+                </li>
+                <li ui-class="{'active': activeTab == 5}">
+                    <a ui-set="{'activeTab': 5}">Daily IT Issue</a>
+                </li>
+            </ul>
+
+            <div ui-if="activeTab == 1">
+                <div class="list-group text-center">
+                    <div class="list-group-item">
+                        <a href="images/AOSReference.pdf" target="_blank">
+                            <img src="images/AOSReference.jpg" alt="AOS Reference letter" />
+                        </a>
+                        <hr>
+                        <a href="images/AOSReference1.pdf" target="_blank">
+                            <img src="images/AOSReference1.jpg" alt="AOS Reference letter" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div ui-if="activeTab == 2">
+                <div class="list-group-item">
+                    <a href="images/AOSmithContract.jpg" target="_blank">
+                        <img src="images/AOSmithContract.jpg" alt="AOS Contract" />
+                    </a>
+                </div>
+            </div>
+
+            <div ui-if="activeTab == 3">
+                <div class="list-group-item">
+                    <a href="images/AOSCertificate.pdf" target="_blank">
+                        <img src="images/AOSCertificate.jpg" alt="AOS Certificate" />
+                    </a>
+                </div>
+            </div>
+
+            <div id="AOSProjects" ui-if="activeTab == 4">
+                <div id="visitorRegistration">
+                    <h3>Visitor Registration</h3>
+                    <ul>
+                        <li>Visitor inputs personal information and picks the visited employee</li>
+                        <li>System advises the visited employee by email automatically</li>
+                        <li>The visited employee inputs his employee id to print temporary badge for the visitor</li>
+                        <li>The visited employee is responsible to check out the visitor in system when he leaves</li>
+                        <li>English, French, Mandarin supported by system</li>
+                    </ul>
+                    <br>
+                    <button type="submit" id="submit" name="Send" class="button lightorange" style="margin:0 0 10px 0;">
+                        <div class="shine"></div>go to Visitor Registration Site
+                    </button>
+                </div>
+
+                <div id="HRAttendance">
+                    <h3>HR Attendance</h3>
+                    <ul>
+                        <li>Import a CSV file which contains staff's attendance information</li>
+                        <li>Filter attendance data by Paycode, Paydate, Name etc.</li>
+                        <li>Draw bar chart to demonstrate the yearly statistics of "Increase" and "New" status</li>
+                        <li>Filter employee list of "Increase" status or "New" status by date</li>
+                        <li>Export the filtered employee list into an excel file</li>
+                        <li>Draw bar chart to demonstrate the yearly statistics of "Absence", "Late" and "LOA"</li>
+                        <li>Draw table to demonstrate the year to date statistics of "Absence", "Late" and "LOA"</li>
+                    </ul>
+                    <br>
+                    <button type="submit" id="submit" name="Send" class="button lightorange" style="margin:0 0 10px 0;">
+                        <div class="shine"></div>go to HR Attendance Site
+                    </button>
+                </div>
+
+                <div id="LoadConfiguration">
+                    <h3>Load Configuration</h3>
+                    <ul>
+                        <li>Use FRAMESET tag to separate the main interface into three parts: Header(top), Advertisement(left), Truck load calculator(right)</li>
+                        <li>Combine input and datalist to provide an autocomplete feature for SKU or Model input. Then users do not need to remember the accurate SKU or Model number</li>
+                        <li>Retrieve the parameters of a specific heater from oracle database</li>
+                        <li>Add one or multiple heaters and calculate the truck load</li>
+                        <li>The corresponding values of the heater list would be changed along with the heater count dynamically</li>
+                        <li>Integrate the Load Configuration Website into the existing www.hotwaterhelp.net</li>
+                        <li>English, French are supported by system</li>
+                    </ul>
+                    <br>
+                    <button type="submit" id="submit" name="Send" class="button lightorange" style="margin:0 0 10px 0;">
+                        <div class="shine"></div>go to LoadConfiguration Site
+                    </button>
+                </div>
+
+                <div id="SNQuery">
+                    <h3>Serial Number Query</h3>
+                    <ul>
+                        <li>Query oracle database based on one or multiple serial numbers user typed in</li>
+                        <li>List all status of those serial numbers include shipment, warranty, conversion etc.</li>
+                        <li>Input validation. Each heater has an unique serial number.</li>
+                    </ul>
+                    <br>
+                    <button type="submit" id="submit" name="Send" class="button lightorange" style="margin:0 0 10px 0;">
+                        <div class="shine"></div>go to SerialNo Query Site
+                    </button>
+                </div>
+
+                <div id="HelpDesk">
+                    <h3>Help Desk</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <button type="submit" id="submit" name="Send" class="button lightorange" style="margin:0 0 10px 0;">
+                        <div class="shine"></div>go to Help Desk Site
+                    </button>
+                </div>
+            </div>
+
+            <div id="dailyITissue" ui-if="activeTab == 5">
+                <h3>Focus 50% effort on providing IT support to staff. The main responsibilities are as following:</h3>
+                <ol>
+                    <li>Install Windows Operating System on new computer</li>
+                    <li>Set up new hardwares like printer, scanner, photocopier, bar code scanner, plotter, landline, cellphone etc.</li>
+                    <li>Install application software for staff</li>
+                    <li>Change toner for printers and mail the old toners back to vendor</li>
+                    <li>Set up network, projector and soft phone for meetings</li>
+                    <li>Maintain hardware in server room</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+</div>

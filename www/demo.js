@@ -70,6 +70,10 @@ app.config(function ($routeProvider) {
         templateUrl: 'conestoga.html',
         reloadOnSearch: false
     });
+    $routeProvider.when('/AOSmith', {
+        templateUrl: 'AOSmith.html',
+        reloadOnSearch: false
+    });
     $routeProvider.when('/reference', {
         templateUrl: 'reference.html',
         reloadOnSearch: false
