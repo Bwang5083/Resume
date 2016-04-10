@@ -519,6 +519,54 @@ tbody tr:nth-child(even) {
     transition: all .25s ease-in;
 }
 
+#AOSProjects h3 {
+    color: #FF7F00;
+    margin-bottom: 15px;
+}
+
+#AOSProjects li {
+    font-size: 125%;
+    margin-bottom: 10px;
+}
+
+#visitorRegistration {
+    padding: 35px 95px;
+    background-color: #F2F2F2;
+}
+
+#HRAttendance {
+    padding: 35px 95px;
+    background-color: #E0FFFF;
+}
+
+#LoadConfiguration {
+    padding: 35px 95px;
+    background-color: #F2F2F2;
+}
+
+#SNQuery {
+    padding: 35px 95px;
+    background-color: #E0FFFF;
+}
+
+#HelpDesk {
+    padding: 35px 95px;
+    background-color: #F2F2F2;
+}
+
+#dailyITissue h3 {
+    color: #FF7F00;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+#dailyITissue li {
+    font-size: 125%;
+    margin-bottom: 10px;
+    margin-left: 35px;
+}
+
 .button {
     display: inline-block;
     padding: 10px 36px;
