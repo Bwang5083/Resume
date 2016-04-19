@@ -529,29 +529,10 @@ tbody tr:nth-child(even) {
     margin-bottom: 10px;
 }
 
-#visitorRegistration {
+#AOSProjects > div {
     padding: 35px 95px;
     background-color: #F2F2F2;
-}
-
-#HRAttendance {
-    padding: 35px 95px;
-    background-color: #E0FFFF;
-}
-
-#LoadConfiguration {
-    padding: 35px 95px;
-    background-color: #F2F2F2;
-}
-
-#SNQuery {
-    padding: 35px 95px;
-    background-color: #E0FFFF;
-}
-
-#HelpDesk {
-    padding: 35px 95px;
-    background-color: #F2F2F2;
+    border-bottom: 3px solid white;
 }
 
 #dailyITissue h3 {
