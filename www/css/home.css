@@ -535,6 +535,24 @@ tbody tr:nth-child(even) {
     border-bottom: 3px solid white;
 }
 
+.Terms{
+    float: right;
+
+}
+
+.Terms td{
+    margin: 10px 15px;
+    color: #8B2500;
+    font-weight: bold;
+    text-align: center;
+    border-color: #F2F2F2;
+    border-width: 10px;
+    background: -moz-linear-gradient(0, #383838 0%, #636363 30%, #C2C2C2 50%, #636363 80%, #383838 100%);
+    background: -webkit-linear-gradient(0, #383838 0%, #636363 30%, #C2C2C2 50%, #636363 80%, #383838 100%);
+    background: -o-linear-gradient(0, #383838 0%, #636363 30%, #C2C2C2 50%, #636363 80%, #383838 100%);
+    background: linear-gradient(#008B8B, #76EEC6, #008B8B);
+}
+
 #dailyITissue h3 {
     color: #FF7F00;
     margin-bottom: 15px;
