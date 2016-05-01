@@ -5,12 +5,22 @@
     <title>Resume</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>
         $('#slider').anythingSlider({
             buildArrows: false,
             autoPlay: false,
             buildStartStop: false,
             resizeContents: false
+        });
+
+        $(function () {
+            $('.fadein img:gt(0)').hide();
+            setInterval(function () {
+                $('.fadein :first-child').fadeOut(200)
+                .next('img').fadeIn(200)
+                .end().appendTo('.fadein');
+            }, 3000);
         });
     </script>
 </head>
@@ -23,6 +33,10 @@
                     <div id="photo">
                         <img src="images/photo2.JPG" alt="photo" height="200" width="220">
                     </div>
+                    <!--div class="fadein">
+			            <img src="images/photo1.jpg" alt="slide picture" />
+                        <img src="images/photo2.jpg" alt="slide picture" />
+			        </div-->
                     <div id="contact">
                         <h1>Jason Wang</h1>
                         <h3>150 Garafraxa ST West, Fergus ON, N1M 1C9</h3>
