@@ -147,6 +147,11 @@
     float: left;
     margin: 10px 15px 10px 5px
 }
+#BaiduStaHpage {
+    width: 65%;
+    overflow: hidden;
+    margin: auto 8px;
+}
 #FarmSection {
     border: 3px double #8B0000;
     border-radius: 5px;
