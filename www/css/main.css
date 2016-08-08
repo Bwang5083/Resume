@@ -3,17 +3,18 @@ body {
 }
 
 .fadein {
-	clear: both;
     float: left;
 	position: relative;
-	width: 40%;
-	height: 150px;
+	width: 250px;
+	height: 175px;
 }
 
 .fadein img {
 	position: absolute;
-	width: 40%;
-	height: 150px;
+    top: 15px;
+    left: 50px;
+	width: 250px;
+	height: 175px;
 }
 
 @media (min-width: 768px) {

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>
+        $.noConflict();
+
         $('#slider').anythingSlider({
             buildArrows: false,
             autoPlay: false,
@@ -26,17 +28,23 @@
 </head>
 
 <body>
+    <!--div class="fadein">
+        <img src="images/photo1.jpg" alt="slide picture" />
+        <img src="images/photo2.jpg" alt="slide picture" />
+        <img src="images/photo3.jpg" alt="slide picture" />
+    </div-->
     <div class="scrollable">
         <div class="scrollable-content">
             <div class="list-group text-center">
                 <div class="list-group-item list-group-item-home">
-                    <div id="photo">
+                    <!--div id="photo">
                         <img src="images/photo2.JPG" alt="photo" height="200" width="220">
-                    </div>
-                    <!--div class="fadein">
+                    </div-->
+                    <div class="fadein">
 			            <img src="images/photo1.jpg" alt="slide picture" />
                         <img src="images/photo2.jpg" alt="slide picture" />
-			        </div-->
+                        <img src="images/photo3.jpg" alt="slide picture" />
+			        </div>
                     <div id="contact">
                         <h1>Jason Wang</h1>
                         <h3>150 Garafraxa ST West, Fergus ON, N1M 1C9</h3>
