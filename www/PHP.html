@@ -83,32 +83,122 @@
                         <div class="panel-body">
                             <div id="BusserviceHeader">
                                 <div id="DevelopEnv">
-                                    <a href="http://70.53.104.194:8090/baidu_sta/admin/index.php" target="_blank"><button type="submit" class="button lightorange" style="margin:0 0 10px 0;"><div class="shine"></div>Baidu Statistics</button></a>
+                                    <a href="http://70.53.104.194:8090/baidu_sta/admin/index.php" target="_blank"><button type="submit" class="button lightorange" style="margin:0 0 10px 0;"><div class="shine"></div>Baidu Statistics Website</button></a>
                                     <h5><strong>Platform:</strong> Windows Operation System</h5>
                                     <h5><strong>Language:</strong> PHP, HTML, CSS, Javascript, Bootstrap</h5>
                                     <h5><strong>Development Tool:</strong> WAMPSERVER, Easy Eclipse for PHP</h5>
                                     <h5><strong>Database:</strong> SQL Server 2008</h5>
                                     <h5><strong>Functions:</strong> </h5>
                                     <ol>
-                                        <li>Set up connection with Baidu Server</li>
-                                        <li>Verify token</li>
-                                        <li>Request to download report</li>
-                                        <li>Query the status of report with Baidu Server</li>
-                                        <li>Download report</li>
-                                        <li>Anylize CSV file</li>
-                                        <li>Display on website and insert into database</li>
+                                        <li>User Management</li>
+                                        <li>Download Baidu Statistics Report</li>
+                                        <li>Download Baidu NetAlliance Report</li>
+                                        <li>Download Baidu Search Report</li>
+                                        <li>Display the downloaded report</li>
+                                        <li>Read data from CSV file and insert into SQL Server database</li>
                                     </ol>
                                 </div>
                                 <div id="BaiduStaHpage">
-                                    <a href="images/baidusta_barchart.jpg" target="_blank">
-                                        <img src="images/baidusta_barchart.jpg" alt="Presbyterian Church" style="margin-bottom:8px;" />
+                                    <a href="images/BaiduLogin.jpg" target="_blank">
+                                        <img src="images/BaiduLogin.jpg" alt="Baidu Statistics" style="margin-bottom:8px;" />
                                     </a>
-                                    <a href="images/baidusta_piechart.jpg" target="_blank">
-                                        <img src="images/baidusta_piechart.jpg" alt="Presbyterian Church" style="margin-bottom:8px;" />
-                                    </a>
-                                    <a href="images/baidusta_linechart.jpg" target="_blank">
-                                        <img src="images/baidusta_linechart.jpg" alt="Presbyterian Church" />
-                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="BusserviceSection">
+                                <h4>Features: </h4>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>1. User Management</h5>
+                                        <ul>
+                                            <li>Retrive users from SQL Server database and display</li>
+                                            <li>Add a new user</li>
+                                            <li>Update the profile of an existing user</li>
+                                            <li>Delete an user</li>
+                                            <li>Page Navigation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/BaiduUser.jpg" target="_blank">
+                                            <img src="images/BaiduUser.jpg" alt="posters in home page" height="300px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>2. Download Baidu Statistics Report</h5>
+                                        <ul>
+                                            <li>Connect to Baidu server, set up a session between client and server</li>
+                                            <li>Sent a request(JSON format which contains username, password, session id, date) to Baidu server</li>
+                                            <li>Query the generating status of report periodically</li>
+                                            <li>Retrieve a link from Baidu server and download report</li>
+                                            <li>Save the csv report to local disk</li>
+                                            <li>Read data from csv file, display the report and insert data into database</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/BaiduStaWeb.jpg" target="_blank">
+                                            <img src="images/BaiduStaWeb.jpg" alt="posters in home page" height="300px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>3. Download Baidu NetAlliance Report</h5>
+                                        <ul>
+                                            <li>Connect to Baidu server, set up a session between client and server</li>
+                                            <li>Sent a request(JSON format which contains username, password, session id, start date, end date) to Baidu server</li>
+                                            <li>Query the generating status of report every five seconds, fail after three times querying</li>
+                                            <li>Retrieve a link from Baidu server and download report</li>
+                                            <li>Save the csv report to local disk</li>
+                                            <li>Read data from csv file, display the report and insert data into database</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/BaiduNetAlliance.jpg" target="_blank">
+                                            <img src="images/BaiduNetAlliance.jpg" alt="posters in home page" height="300px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>4. Download Baidu Search Report</h5>
+                                        <ul>
+                                            <li>Connect to Baidu server, set up a session between client and server</li>
+                                            <li>Sent a request(JSON format which contains username, password, session id, start date, end date) to Baidu server</li>
+                                            <li>Query the generating status of report every five seconds, fail after three times querying</li>
+                                            <li>Retrieve a link from Baidu server and download report</li>
+                                            <li>Save the csv report to local disk</li>
+                                            <li>Read data from csv file, display the report and insert data into database</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage">
+                                        <a href="images/BaiduSearchWeb.jpg" target="_blank">
+                                            <img src="images/BaiduSearchWeb.jpg" alt="posters in home page" height="300px" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="Function">
+                                    <div class="BusserviceFunction">
+                                        <h5>5. Demonstrate Report through Chart</h5>
+                                        <ul>
+                                            <li>Select year, account and chart type</li>
+                                            <li>Demonstrate Report through bar chart</li>
+                                            <li>Demonstrate Report through line chart</li>
+                                            <li>Demonstrate Report through pie chart</li>
+                                        </ul>
+                                    </div>
+                                    <div class="FunctionPage" style="border:none;">
+                                        <a href="images/baidusta_barchart.jpg" target="_blank">
+                                            <img src="images/baidusta_barchart.jpg" alt="posters in home page" height="300px" style="border:1px solid black;margin-bottom:8px;" />
+                                        </a>
+                                        <a href="images/baidusta_linechart.jpg" target="_blank">
+                                            <img src="images/baidusta_linechart.jpg" alt="posters in home page" height="300px" style="border:1px solid black;margin-bottom:8px;" />
+                                        </a>
+                                        <a href="images/baidusta_piechart.jpg" target="_blank">
+                                            <img src="images/baidusta_piechart.jpg" alt="posters in home page" height="300px" style="border:1px solid black;" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
