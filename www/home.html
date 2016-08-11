@@ -5,16 +5,11 @@
     <title>Resume</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/js-image-slider.css" />
+    <script src="js/js-image-slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>
         $.noConflict();
-
-        $('#slider').anythingSlider({
-            buildArrows: false,
-            autoPlay: false,
-            buildStartStop: false,
-            resizeContents: false
-        });
 
         $(function () {
             $('.fadein img:gt(0)').hide();
@@ -28,11 +23,6 @@
 </head>
 
 <body>
-    <!--div class="fadein">
-        <img src="images/photo1.jpg" alt="slide picture" />
-        <img src="images/photo2.jpg" alt="slide picture" />
-        <img src="images/photo3.jpg" alt="slide picture" />
-    </div-->
     <div class="scrollable">
         <div class="scrollable-content">
             <div class="list-group text-center">
@@ -146,8 +136,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="list-group-item">
-                    <div class="page" id="hobby">
+                <div class="list-group-item" style="height:365px;">
+                    <div class="page" id="hobby" style="float:left;">
                         <h2>Activities and Interests</h2>
                         <ul>
                             <li>Interested mountain climbing, hiking etc</li>
@@ -155,16 +145,14 @@
                             <li>Enjoy opportunities to expand my circle of friends</li>
                             <li>Go to church every Sunday morning to join weekend worship</li>
                         </ul>
-                        <!--
+                    </div>
+                    <div id="sliderFrame">
                         <div id="slider">
-                            <div class="slidePanel"><a href="page1.html"><h2>The Amazing Pumpkin</h2><img src="images/3lyrs2.jpg" alt="Pumpkin" width="215" height="119" class="imgLeft"></a>
-                            </div>
-                            <div class="slidePanel"><a href="page2.html"><h2>The Amazing Grape</h2><img src="images/3lyrs2.jpg" alt="Grapes" width="213" height="118" class="imgLeft"></a>
-                            </div>
-                            <div class="slidePanel"><a href="page3.html"><h2>The Amazing Assorted Vegetables</h2><img src="images/3lyrs2.jpg" alt="Various" width="210" height="117" class="imgLeft"></a>
-                            </div>
+                            <img src="images/act1.jpg" alt="Nanjing China" />
+                            <img src="images/act2.jpg" alt="Suzhou China" />
+                            <img src="images/act3.jpg" alt="Hainan Island" />
+                            <img src="images/act4.jpg" alt="Shanghai TV Tower" />
                         </div>
-                        -->
                     </div>
                 </div>
             </div>
